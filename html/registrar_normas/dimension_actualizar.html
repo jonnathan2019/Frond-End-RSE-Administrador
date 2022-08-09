@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Usuario.</title>
+    <link rel="icon" type="image/png" href="../../imagenes/logo_3.png" />
+    <link rel="stylesheet" href="../../css/actualizar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!--LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body class="cuerpo">
+    <input type="checkbox" id="check">
+    <!--NAV-->
+    <div class="nav">
+        <label class="logo">
+            <img src="../../imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+        <ul>
+            <li class="salir" onclick="menuToggle();"><a class="far fa-user" href="#"></a></li>
+            <div class="menu-salir">
+                <div class="info-user">
+                    <div class="logo-user">
+                        <a class="far fa-user"></a>
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="nombre-user">
+                            <span>Jonnthan</span>
+                        </div>
+                        <div class="correo-user">
+                            <span>jonthancuvi@gameil.com</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li onclick="ir_perfil();"><i class="far fa-user-circle"></i></i>
+                        <a>Mi Perfil</a>
+                    </li>
+                    <!--<li><i class="fas fa-edit"></i><a href="#">Editar Perfil</a></li>-->
+                    <li><i class="fas fa-sign-out-alt"></i><a onclick="salir()">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <!--sidebar start-->
+    <!-- <div class="sidebar">
+        <label for="check" class="check1">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="slider-encabesado">
+            R S E
+        </div>
+        <a class="slider-opcion" href="#"><i class="fas fa-home"></i>
+            <span>Home</span>
+            <div class="texto-emergente">
+                Home
+            </div>
+        </a>
+        <a class="slider-opcion" onclick="ir_evaluacion();">
+            <i class="fas fa-poll-h"></i>
+            <span>Evaluacion</span>
+            <div class="texto-emergente">
+                Evaluacion
+            </div>
+        </a>
+        <a class="slider-opcion" onclick="ir_reporte();">
+            <i class="far fa-file-alt"></i>
+            <span>Reporte</span>
+            <div class="texto-emergente">
+                Reporte
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-table"></i>
+            <span>Estandares</span>
+            <div class="texto-emergente">
+                Estandares
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-cogs"></i>
+            <span>Configuracion</span>
+            <div class="texto-emergente">
+                Configuracion
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-info-circle"></i>
+            <span>About</span>
+            <div class="texto-emergente">
+                About
+            </div>
+        </a>
+    </div> -->
+
+    <!--sidebar end-->
+
+    <!--contenido-->
+    <div class="content">
+        <!--Ingresar Dimensiones-->
+        <div class="items-norma-3" id="contenedor_3">
+            <div class="contenedor-registrar">
+                <div class="contenedor-dimenision">
+                    <div class="titulo">
+                        <span>Información de la Dimensión.</span>
+                    </div>
+                    <div class="wrapper">
+
+                        <div class="tabs">
+                            <ul>
+                                <li class="active">
+                                    <span class="icon">
+                                    </span>
+                                    <span class="text">Información Dimensión</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                    </span>
+                                    <span class="text">Temas de la Dimensión</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="content-tabs">
+                            <div class="tab_wrap titulo-imputs" style="display: block;">
+                                <div class="info-dimension">
+                                    <span>Datos a Editar.</span>
+                                </div>
+                                <div class="contenedor-inputs">
+                                    <div class="datos-1">
+                                        <label for="">Nombre Dimensión:</label>
+                                        <input type="text" id="nombre-dimension" placeholder="Nombre Dimension">
+                                    </div>
+                                    <div class="datos-1">
+                                        <label for="">Descripción Dimensión:</label>
+                                        <!-- <input type="text" id="descripcion-dimension" placeholder="Descripcion Indicador"> -->
+                                        <textarea id="descripcion-dimension"
+                                            placeholder="Descripcion Indicador"></textarea>
+                                    </div>
+                                    <div class="datos-1">
+                                        <label for="">Estándar Seleccionado:</label>
+                                        <input type="text" id="estandar-dimension" disabled="disabled">
+                                        <label for="">Elija un nuevo Estándar: </label>
+                                        <select id="selector" class="selector-estandares"
+                                            onclick="cargar_estar_label();">
+                                            <option value="">Elija un nuevo estadar</option>
+                                            <option value="Desarrollador" id="trabajo">Estandar 1</option>
+                                            <option value="Desarrollador" id="trabajo">Estandar 2</option>
+                                            <option value="Desarrollador" id="trabajo">Estandar 3</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <!--Botones-->
+                                <div class="contenedor-botones">
+                                    <div class="boton" onclick="regresar()">
+                                        <span>Regresar</span>
+                                    </div>
+                                    <div class="boton" onclick="actualizar_dimension();">
+                                        <span>Guardar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Tema y Nivel-->
+                            <div class="tab_wrap titulo-imputs" style="display: none;">
+                                <div class="info-dimension">
+                                    <span>Temas de la Dimensión</span>
+                                </div>
+                                <div class="tablas tabal-dimensiones">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nombre</th>
+                                                <th>Descripcion</th>
+                                                <th>Dimension Pertenecia</th>
+                                                <th>Fecha de Creacion</th>
+                                                <th>Fecha de Modificacion</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cuerpo-tabla-temas">
+                                            <tr>
+                                                <th>ID</th>
+                                                <td>Agua</td>
+                                                <td>Enero</td>
+                                                <td>$ 3,000</td>
+                                                <td>Agua</td>
+                                                <td>Enero</td>
+                                                <td>Enero</td>
+                                            </tr>
+                                            <tr>
+                                                <th>ID</th>
+                                                <td>Agua</td>
+                                                <td>Enero</td>
+                                                <td>$ 3,000</td>
+                                                <td>Agua</td>
+                                                <td>Enero</td>
+                                                <td>Enero</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--Botones-->
+                                <div class="contenedor-botones">
+                                    <div class="boton" onclick="regresar()">
+                                        <span>Regresar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+
+            function menuToggle() {
+                const toggleMenu = document.querySelector('.menu-salir');
+                toggleMenu.classList.toggle('active')
+            }
+
+            var tabs = document.querySelectorAll(".tabs ul li");
+            var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+            tabs.forEach(function (tab, tab_index) {
+                tab.addEventListener("click", function () {
+                    tabs.forEach(function (tab) {
+                        tab.classList.remove("active");
+                    })
+                    tab.classList.add("active");
+
+                    tab_wraps.forEach(function (content, content_index) {
+                        if (content_index == tab_index) {
+                            content.style.display = "block";
+                        }
+                        else {
+                            content.style.display = "none";
+                        }
+                    })
+
+                })
+            })
+
+            var f = new Date();
+            var fecha_actual = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+            console.log(fecha_actual);
+        </script>
+
+</body>
+<script src="../../js/urls.js"></script>
+<script src="../../js/js_registrar_norma/editar_dimension.js"></script>
+
+</html>

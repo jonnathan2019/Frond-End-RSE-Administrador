@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Usuario.</title>
+    <link rel="icon" type="image/png" href="../../imagenes/logo_3.png" />
+    <link rel="stylesheet" href="../../css/actualizar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!--LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body class="cuerpo">
+    <input type="checkbox" id="check">
+    <!--NAV-->
+    <div class="nav">
+        <label class="logo">
+            <img src="../../imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+        <ul>
+            <li class="salir" onclick="menuToggle();"><a class="far fa-user" href="#"></a></li>
+            <div class="menu-salir">
+                <div class="info-user">
+                    <div class="logo-user">
+                        <a class="far fa-user"></a>
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="nombre-user">
+                            <span>Jonnthan</span>
+                        </div>
+                        <div class="correo-user">
+                            <span>jonthancuvi@gameil.com</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li onclick="ir_perfil();"><i class="far fa-user-circle"></i></i>
+                        <a>Mi Perfil</a>
+                    </li>
+                    <!--<li><i class="fas fa-edit"></i><a href="#">Editar Perfil</a></li>-->
+                    <li><i class="fas fa-sign-out-alt"></i><a onclick="salir()">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <!--sidebar start-->
+    <!-- <div class="sidebar">
+        <label for="check" class="check1">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="slider-encabesado">
+            R S E
+        </div>
+        <a class="slider-opcion" href="#"><i class="fas fa-home"></i>
+            <span>Home</span>
+            <div class="texto-emergente">
+                Home
+            </div>
+        </a>
+        <a class="slider-opcion" onclick="ir_evaluacion();">
+            <i class="fas fa-poll-h"></i>
+            <span>Evaluacion</span>
+            <div class="texto-emergente">
+                Evaluacion
+            </div>
+        </a>
+        <a class="slider-opcion" onclick="ir_reporte();">
+            <i class="far fa-file-alt"></i>
+            <span>Reporte</span>
+            <div class="texto-emergente">
+                Reporte
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-table"></i>
+            <span>Estandares</span>
+            <div class="texto-emergente">
+                Estandares
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-cogs"></i>
+            <span>Configuracion</span>
+            <div class="texto-emergente">
+                Configuracion
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-info-circle"></i>
+            <span>About</span>
+            <div class="texto-emergente">
+                About
+            </div>
+        </a>
+    </div> -->
+
+    <!--sidebar end-->
+
+    <!--contenido-->
+    <div class="content">
+        <!--Ingresar Estandares-->
+        <div class="items-norma-2" id="contenedor_2">
+            <div class="contenedor-general">
+                <div class="titulo">
+                    <span>Información del Estándar.</span>
+                </div>
+                <div class="wrapper">
+
+                    <div class="tabs">
+                        <ul>
+                            <li class="active">
+                                <span class="icon">
+                                </span>
+                                <span class="text">Información Estándar</span>
+                            </li>
+                            <li>
+                                <span class="icon">
+                                </span>
+                                <span class="text">Dimensiones del Estándar</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="content-tabs">
+                        <div class="tab_wrap" style="display: block;">
+                            <div class="contenedor-registrar">
+                                <div class="info-estandar">
+                                    <span>Datos a Editar del Estandár.</span>
+                                </div>
+                                <div class="contener-inputs">
+                                    <div class="nombre-pais">
+                                        <div class="datos-1">
+                                            <label for="">Nombre: </label>
+                                            <input type="text" id="nombre-estandar" placeholder="Nombre Estadar">
+                                        </div>
+                                        <div class="datos-1">
+                                            <label for="">Pagina Ofical:</label>
+                                            <input type="text" id="pais-ofical" placeholder="Pagina Ofical">
+                                        </div>
+                                    </div>
+                                    <div class="ano-vigencia">
+                                        <div class="datos-1">
+                                            <label for="">Año de Creación: </label>
+                                            <input type="text" id="ano-creacion-estandar" placeholder="Año de creacion">
+                                        </div>
+                                        <div class="datos-1">
+                                            <label for="">Institucion de Pertenencia: </label>
+                                            <input type="text" id="institucion-pertenecia-estandar"
+                                                placeholder="Institucion de Pertenecia">
+                                        </div>
+                                    </div>
+                                    <div class="vercion-pais">
+                                        <div class="datos-1">
+                                            <label for="">Año de Vigencia: </label>
+                                            <input type="text" id="ano-vigencia-estandar" placeholder="Año de vigencia">
+                                        </div>
+                                        <div class="datos-1">
+                                            <label for="">Versión: </label>
+                                            <input type="text" id="vercion-estandar" placeholder="Vercion Estandár">
+                                        </div>
+                                    </div>
+                                    <div class="region-pais">
+                                        <div class="datos-1">
+                                            <label for="">Pais de Origen:</label>
+                                            <input type="text" id="pais-origen-estandar" placeholder="Pais Origen">
+                                        </div>
+                                        <div class="datos-1">
+                                            <label for="">Region de Aplicación: </label>
+                                            <input type="text" id="region-aplicacion-estandar"
+                                                placeholder="Region de Aplciacion">
+                                        </div>
+                                    </div>
+                                    <div class="datos-1" id="des-estandar">
+                                        <label for="">Descripción: </label>
+                                        <!-- <input type="text" id="descripcion-estandar" placeholder="Descripcion Estandar"> -->
+                                        <textarea id="descripcion-estandar"
+                                            placeholder="Descripción Estándar"></textarea>
+                                    </div>
+                                </div>
+                                <!--Botones-->
+                                <div class="contenedor-botones">
+                                    <div class="boton" onclick="regresar()">
+                                        <span>Regresar</span>
+                                    </div>
+                                    <div class="boton" onclick="actualizar_estandar()">
+                                        <span>Guardar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- dimensiones del estatandar -->
+                        <div class="tab_wrap" style="display: none;">
+                            <div class="contenedor-registrar">
+                                <div class="dimeniones-estandar">
+                                    <span>Dimesiones del Estandár</span>
+                                </div>
+                                <div class="tablas">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nombre</th>
+                                                <th>Descripción</th>
+                                                <th>Estandár Pertenencia</th>
+                                                <th>Fecha de Creación</th>
+                                                <th>Fecha de Modificación</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cuerpo-tabla-dimensiones">
+                                            <tr>
+                                                <th>ID</th>
+                                                <td>Agua</td>
+                                                <td>
+                                                    <button>Ver</button>
+                                                    <button>Eliminar</button>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <th>ID</th>
+                                                <td>Agua</td>
+                                                <td>
+                                                    <button>Ver</button>
+                                                    <button>Eliminar</button>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="contenedor-botones">
+                                <div class="boton" onclick="regresar()">
+                                    <span>Regresar</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.menu-salir');
+            toggleMenu.classList.toggle('active')
+        }
+
+        var tabs = document.querySelectorAll(".tabs ul li");
+        var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+        tabs.forEach(function (tab, tab_index) {
+            tab.addEventListener("click", function () {
+                tabs.forEach(function (tab) {
+                    tab.classList.remove("active");
+                })
+                tab.classList.add("active");
+
+                tab_wraps.forEach(function (content, content_index) {
+                    if (content_index == tab_index) {
+                        content.style.display = "block";
+                    }
+                    else {
+                        content.style.display = "none";
+                    }
+                })
+
+            })
+        })
+
+        var f = new Date();
+        var fecha_actual = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+        console.log(fecha_actual);
+    </script>
+
+</body>
+<script src="../../js/urls.js"></script>
+<script src="../../js/js_registrar_norma/editar_estandar.js"></script>
+
+</html>

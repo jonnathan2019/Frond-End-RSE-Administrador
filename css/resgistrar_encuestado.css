@@ -1,0 +1,182 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*_______________________________________________*/
+body{
+    display: flex;
+    justify-content: center;
+    background: #f1f5f9;
+    background-image: url(../imagenes/mountains.png);
+}
+.container{
+    margin-top: 30px;
+    height: 500px;
+    width: 85%;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(71, 69, 69, 0.5);
+    background: #fff;   
+}
+
+.container .decripcion{
+    width: 40%;
+    height: 100%;
+    float: left;
+    /*background: rgb(89,17,224);
+    background: linear-gradient(0deg, rgba(89,17,224,1) 6%, rgba(174,0,255,1) 92%);*/
+    background: rgb(71, 71, 241);
+    border-radius: 15px;
+    border-bottom-right-radius: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .decripcion .decripcion-full{
+    margin-top: 100px;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+}
+.imagen-pix{
+    margin-left: 60px;
+}
+
+.container .decripcion .decripcion-full .decripcion-titulo{
+    width: 100%;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.container .decripcion .decripcion-full .descripcion-contenido{
+   
+    width: 100%;
+    font-size: 14px;
+}
+
+.ingresar-datos{
+    width: 59%;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.container-ingresar-datos{
+    font-size: 14px;
+    width: 80%;
+    height: auto;
+}
+label{
+    font-weight: bold;
+}
+
+.container-ingresar-datos .ingresar-datos-titulo{
+    font-size: 20px;
+    margin-bottom: 13px;
+    text-align: center;
+    font-weight: bold;
+}
+    
+
+.line-separacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.line-separacion .or{
+    margin: 0px 20px;
+}
+
+.line-separacion .line{
+    width: 50%;
+    height: 1px;
+    border-top: solid #c5c2c2 1px;
+    
+}
+/*_______________________________________________*/
+/*___________________INICIO Inputs________________________*/
+.nombre-apellido{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contrasena{
+    display: flex;
+    justify-content: space-between;
+}
+.row-nombre, .row-apellido, .row-contrasena, .row-contrasena-confir{
+    width: 45%;
+    margin: 6px 0px;
+}
+
+.row-nombre-usuario, .row-email{
+    margin: 6px 0px;
+}
+
+
+.ingresar-nombre, .ingresar-apellido, .ingresar-nombre-usuario, .ingresar-email, .ingresar-telefono, .ingresar-trabajo, .ingresar-contrasena, .ingresar-contrasena-confir{
+    text-align: center;
+    border: 1px solid #c5c2c2;
+    border-radius: 15px;
+    margin: 5px 0px;
+}
+/*tamano de inputs*/
+.ingresar-nombre input, .ingresar-apellido input, .ingresar-nombre-usuario input, .ingresar-email input, .ingresar-telefono input, .ingresar-trabajo select, .ingresar-contrasena input, .ingresar-contrasena-confir input{
+    outline: none;  
+    padding: 15px 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+/*definimos el espacio a utilizar de inputs and iconos(i)*/
+.ingresar-nombre i, .ingresar-apellido i, .ingresar-nombre-usuario i, .ingresar-email i, .ingresar-telefono i, .ingresar-trabajo i, .ingresar-contrasena i, .ingresar-contrasena-confir i{
+    width:5%;
+}
+
+.row-nombre i, .row-apellido i, .row-contrasena i, .row-contrasena-confir i{
+    width: 10%;
+}
+
+.ingresar-nombre input, .ingresar-apellido input, .ingresar-contrasena input, .ingresar-contrasena-confir input{
+    width: 79%;
+}
+
+.ingresar-nombre-usuario input, .ingresar-email input, .ingresar-telefono input, .ingresar-trabajo select{
+    width: 90%;
+}
+
+.ingresar-trabajo select{
+    width: 94%;
+}
+/*___________________FIN Inputs________________________*/
+/*______________ Boton crear usuario___________________*/
+.button-crear-usuario{
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+    /*background: cornflowerblue;
+    background: rgb(89,17,224);
+    background: linear-gradient(0deg, rgba(89,17,224,1) 6%, rgba(174,0,255,1) 92%);*/
+    background: rgb(71, 71, 241);
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 12px 0px;
+}
+
+.button-crear-usuario:hover{
+    background: rgb(98, 98, 236);
+}
+.button-crear-usuario .btn{
+    text-decoration: none;
+    color: #fff;
+}
+
+

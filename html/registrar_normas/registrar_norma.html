@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Norma</title>
+    <link rel="icon" type="image/png" href="../../imagenes/logo_3.png" />
+    <!--Iconos: https://www.youtube.com/watch?v=T76bbMVMX6M-->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!--LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--Style-->
+    <link rel="stylesheet" href="../../css/registrar_norma.css">
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <label class="logo">
+            <img src="../../imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+        <ul>
+            <li class="registrar-norma" onclick="registrar_norma()">
+                Registrar Norma
+            </li>
+            <li class="ver-norma" onclick="mostrar_norma_registarada()">
+                Ver Norma
+            </li>
+            <li class="salir" onclick="menuToggle();"><a class="far fa-user" href="#"></a></li>
+            <div class="menu-salir">
+                <div class="info-user">
+                    <div class="logo-user">
+                        <a class="far fa-user"></a>
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="nombre-user">
+                            <span>Jonnthan</span>
+                        </div>
+                        <div class="correo-user">
+                            <span>jonthancuvi@gameil.com</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li onclick="ir_perfil();"><i class="far fa-user-circle"></i></i>
+                        <a>Mi Perfil</a>
+                    </li>
+                    <!--<li><i class="fas fa-edit"></i><a href="#">Editar Perfil</a></li>-->
+                    <li><i class="fas fa-sign-out-alt"></i><a onclick="salir()">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="contenedor">
+        <div class="titulo-step">
+            <div class="titulo">Registro Norma RSE</div>
+            <div class="stepper-wrapper">
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Estándar</div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Dimensión</div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Tema</div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Indicador</div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Preguntas Cualitativas</div>
+                </div>
+                <!-- <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Preguntas Cuantitativas</div>
+                </div> -->
+            </div>
+            <!--
+            <div class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step 1</small></div>
+                <div class="step-col"><small>Step 2</small></div>
+                <div class="step-col"><small>Step 3</small></div>
+                <div class="step-col"><small>Step 4</small></div>
+                <div class="step-col"><small>Step 5</small></div>
+                <div class="step-col"><small>Step 6</small></div>
+            </div>
+            -->
+        </div>
+        <!--Informacion General-->
+        <div class="items-norma-1" id="contenedor_1">
+
+            <div class="standar-dimension">
+                <div class="standar" onclick="ir_estadar()">
+                    <div class="contendido">
+                        <img src="../../imagenes/estandares.jpg" alt="">
+                        <span class="titulo-contenido">Estándar</span>
+                        <div class="texto-emergente">
+                            <div class="titulo-emergente">
+                                <span>Estándar</span>
+                            </div>
+                            <div class="descripcion-emergente">
+                                <span>Los estándares de responsabilidad social son 
+                                    documentos, guías y compilaciones de normas 
+                                    que establecen los requisitos que deben cumplir 
+                                    los informes presentados por las empresas privadas 
+                                    en materia de responsabilidad social empresarial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dimension" onclick="ir_dimension()">
+                    <div class="contendido">
+                        <img src="../../imagenes/dimensiones.jpg" alt="">
+                        <span class="titulo-contenido">Dimensión</span>
+                        <div class="texto-emergente">
+                            <div class="titulo-emergente">
+                                <span>Dimensión</span>
+                            </div>
+                            <div class="descripcion-emergente">
+                                <span>Las dimensiones son una base de componentes esenciales, 
+                                    que se dividen en una serie de categorías que permiten 
+                                    evaluar la Responsabilidad Social Empresarial.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tema-indicador">
+                <div class="tema" onclick="ir_tema()">
+                    <div class="contendido">
+                        <img src="../../imagenes/temas.jpg" alt="">
+                        <span class="titulo-contenido">Tema</span>
+                        <div class="texto-emergente">
+                            <div class="titulo-emergente">
+                                <span>Tema</span>
+                            </div>
+                            <div class="descripcion-emergente">
+                                <span>Los temas son áreas que se evalúan dentro de 
+                                    Responsabilidad Social Empresarial.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="indcador" onclick="ir_indicador()">
+                    <div class="contendido">
+                        <img src="../../imagenes/indicadores.jpg" alt="">
+                        <span class="titulo-contenido">Indicador</span>
+                        <div class="texto-emergente">
+                            <div class="titulo-emergente">
+                                <span>Indicador</span>
+                            </div>
+                            <div class="descripcion-emergente">
+                                <span>Son una herramienta que sirve para medir el grado de 
+                                    RSE y  la contribución de la empresa con el 
+                                    desarrollo sostenible, también es usado 
+                                    para implantar cambios en las organizaciones 
+                                    a lo interno en búsqueda de emplear acciones 
+                                    mas eficaces en cuanto a la RSE.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preguntas">
+                <div class="preguntas-cualitativas" onclick="ir_preguntas_cualitativas()">
+                    <div class="contendido">
+                        <img src="../../imagenes/preguntas_culitativas.png" alt="">
+                        <span class="titulo-contenido">Preguntas Cualitativas</span>
+                        <div class="texto-emergente">
+                            <div class="titulo-emergente">
+                                <span>Preguntas Cualitativas</span>
+                            </div>
+                            <div class="descripcion-emergente">
+                                <span>Representan la evolución de las 
+                                    prácticas en cada Indicador.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="preguntas-cuantitativas" onclick="ir_preguntas_cuantitativas()">
+                    <div class="contendido">
+                        <img src="../../imagenes/preguntas_cuantitativas.png" alt="">
+                        <span class="titulo-contenido">Preguntas Cuantitativas</span>
+                        <div class="texto-emergente">
+                            <div class="titulo-emergente">
+                                <span>Pregutas Cuantitativas</span>
+                            </div>
+                            <div class="descripcion-emergente">
+                                <span>Las preguntas Cuanatitativas son para saber de esatdo de RSE de la empresa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div id="siguiente_1" class="botton" onclick="comenzar()">Comenzar</div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.menu-salir');
+        toggleMenu.classList.toggle('active')
+    }
+
+    var tabs = document.querySelectorAll(".tabs ul li");
+    var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+    tabs.forEach(function (tab, tab_index) {
+        tab.addEventListener("click", function () {
+            tabs.forEach(function (tab) {
+                tab.classList.remove("active");
+            })
+            tab.classList.add("active");
+
+            tab_wraps.forEach(function (content, content_index) {
+                if (content_index == tab_index) {
+                    content.style.display = "block";
+                }
+                else {
+                    content.style.display = "none";
+                }
+            })
+
+        })
+    })
+</script>
+<script src="../../js/urls.js"></script>
+<script src="../../js/js_registrar_norma/registrar_norma.js"></script>
+
+</html>

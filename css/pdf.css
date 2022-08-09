@@ -1,0 +1,437 @@
+.modal-pdf{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    transition: all 500ms ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#btn-modal-pdf:checked ~ .modal-pdf{
+    visibility: visible;
+    opacity: 1;
+}
+
+.cotendor-modal-pdf{
+    width: 1000px;
+    margin: auto;
+    background: #fff;
+    transition: all 500ms ease;
+    position: relative;
+    transform: translateY(-30%);
+}
+.boton-informe{
+    /* background: #f1f5f9; */
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 3px 0px;
+    color: #706d6d;;
+}
+
+.boton-informe:hover{
+    color: #fff;
+    border-radius: 15px;
+    background: rgb(98, 98, 236);
+}
+
+.boton-informe i{
+    margin-right: 5px;
+}
+
+.opciones-informe{
+    /* background: rgb(190, 180, 180); */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.cotendor-modal-pdf .titulo-modal-pdf{
+    background: rgb(118, 118, 241);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.cotendor-modal-pdf .titulo-modal-pdf span{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.cotendor-modal-pdf .titulo-modal-pdf label{
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#btn-modal-pdf{
+    display: none;
+}
+
+.cotendor-modal-pdf .info-modal-pdf{
+    /* background: rgb(201, 149, 149); */
+    margin: 10px 10px;
+    
+}
+
+.cotendor-modal-pdf .info-modal-pdf .informe-info{
+    border: solid 1px #ccc;
+}
+
+/* cabecera Informe  */
+
+.cabecera-informe{
+    width: 96%;
+    margin-top: 3px;
+    margin: auto;
+}
+.cabecera-informe .cabezera-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(133, 128, 128);
+    font-size: 14px;
+    border-bottom: 5px solid #ccc;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.cabecera-informe .cabezera-user .info-user .titulo-info-user{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cabecera-informe .cabezera-user .info-user .correo-usuario{
+    color: rgb(104, 104, 240);
+}
+
+.cabecera-informe .cabezera-user img{
+    width: 85px;
+    height: 85px;
+}
+
+/*cabecera empresa*/
+
+.cabezera-empresa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(133, 128, 128);
+    font-size: 14px;
+    border-left: 5px solid rgb(89, 89, 235);;
+}
+
+.titulo-info-empresa{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.info-empresa label{
+    font-weight: bold;
+    margin: 0px;
+    margin-left: 7px;
+    margin-right: 5px;
+}
+/* ________Fin Cabecera______ */
+
+.informe-info{
+    border: 1px solid #ccc;
+    overflow: auto;
+    height: 440px;
+    font-size: 14px;
+}
+
+/*desmepeno general*/
+.informe-info .desempeno-general{
+    margin: 20px;
+    /* border: 1px solid #ccc; */
+    
+}
+
+.informe-info .desempeno-general .titulo-deseenpeno-general{
+    padding: 3px;
+    border-bottom: 3px solid #ccc;
+    color: rgb(133, 128, 128);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.informe-info .informacion-general{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.informe-info .informacion-general .info-desempeno{
+    width: 30%;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.informe-info .informacion-general .info-desempeno .titulo-desempeno{
+    padding: 3px;
+    border-bottom:  2px solid #ccc;
+}
+
+/* desempeno por Dimensiones */
+.informe-info .desempeno-dimensiones{
+    margin: 20px;
+    /* border: 1px solid #ccc; */
+}
+
+.informe-info .desempeno-dimensiones .titulo-deseenpeno-dimensiones{
+    padding: 3px;
+    border-bottom: 3px solid #ccc;
+    color: rgb(133, 128, 128);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.info-desmepeno-dimensiones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grafica-desempeno-dimesniones .titulo-desmepeno-grafica{
+    padding: 3px;
+    border-bottom: 3px solid #ccc;
+    text-align: center;
+}
+.grafica-desempeno-dimesniones .grafica-dim-dempeno{
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.desempeno-dimensional{
+    width: 49%;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+}
+
+.contenedor-info-dim{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-demsempeno-dim{
+    padding: 3px;
+    border-bottom:  2px solid #ccc;
+    text-align: center;
+}
+
+.retroalimentacion-dimensional, .puntaje-dimensional{
+    border: 1px solid #ccc;
+    width: 40%;
+    text-align: center;
+    margin: 10px;
+}
+
+.titulo-retroalimentacio-dimesnion, .titulo-desempeno{
+    border-bottom: 2px solid #ccc;
+}
+
+.grafica-dimensional{
+    /* background: chartreuse; */
+    width: 50%;
+    margin: 10px auto;
+}
+
+/* desempeno por Temas  */
+.informe-info .desempeno-temas{
+    margin: 20px;
+    /* border: 1px solid #ccc; */
+}
+
+
+.informe-info .desempeno-temas .titulo-deseenpeno-temas{
+    padding: 3px;
+    border-bottom: 3px solid #ccc;
+    color: rgb(133, 128, 128);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.informacion-temas .informacion-temas-tabla, .informacion-temas .informacion-temas-grafica{
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.informacion-temas .titulo-desempeno-temas{
+    padding: 3px;
+    border-bottom:  2px solid #ccc;
+    text-align: center;
+}
+
+.grafica-desempeno-temas{
+    /* background: chartreuse; */
+    /* width: 50%; */
+    margin: 10px auto;
+    
+}
+
+/* ___________________________ */
+/*GRAFICA RADAR*/
+#grafica_radar-pdf {
+    width: 100%; /*antes estaba esto 700px*/
+    height: 400px;
+    /* border: 1px solid #ccc; */
+}
+/* ___________________________ */
+
+
+/* _____________________ */
+
+.char-barra-cirular-pdf{
+    width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+
+.barra-circular-social-pdf, .barra-circular-ambiental-pdf{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+}
+
+/*-------------------- Tabla de Desempeno TEMAS -----------------------*/
+.tabla-info-temas-pdf{
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+}
+.tabla-info-temas-pdf .tabla-cabecera-temas .cabecera-titutlo{
+    display: flex;   
+    border-bottom: solid 5px #0F362D;
+    font-weight: bold;
+}
+
+.tabla-info-temas-pdf .tabla-cabecera-temas .cabecera-titutlo .titulo-nombre{
+    width: 40%;
+    display: flex;
+}
+
+.tabla-info-temas-pdf .tabla-cabecera-temas .cabecera-titutlo .titulo-valor, .tabla-info-temas-pdf .tabla-cabecera-temas .cabecera-titutlo .titulo-impacto{
+    width: 30%;
+    text-align: center;
+}
+
+
+.tabla-info-temas-pdf .titulo, .tabla-info-temas-pdf .fila .fila-contenct{
+	padding: 8px;
+}
+
+.tabla-info-temas-pdf .titulo, .tabla-info-temas-pdf .fila .fila-contenct img{
+    margin-right: 10px;
+}
+.tabla-info-temas-pdf .cuerpo-tabla-temas-pdf .fila .info-tema{
+    display: flex;
+}
+
+
+.tabla-info-temas-pdf .cuerpo-tabla-temas-pdf .fila .nom-img-temas{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.tabla-info-temas-pdf .cuerpo-tabla-temas-pdf .fila .impacto-tema, .tabla-info-temas-pdf .cuerpo-tabla-temas-pdf .fila .barra-tema{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabla-info-temas-pdf .contenido-indicador:nth-child(even){
+	background-color: #ddd;
+    background: #f1f5f9;
+    border-bottom: 0.3px solid #ccc;
+    border-top:  0.3px solid #ccc;
+}
+
+.tabla-info-temas-pdf .cuerpo-tabla-temas-pdf .fila .info-tema:hover{
+	background-color: #369681;
+    background: rgb(118, 118, 241);
+	color: white;
+    cursor: pointer;
+}
+
+.tabla-info-temas-pdf  .imagen{
+    height:30px;
+   width:30px;
+   -moz-border-radius:50px;
+   -webkit-border-radius:50px;
+   border-radius:50px;
+   margin-right: 5px;
+   left: 0px;
+   border: 1px solid #ccc;
+}
+
+.grafica-barra-temas-pdf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 163px;
+}
+
+.tabla-info-temas-pdf .contorno{
+    background: rgb(241, 241, 227);
+    border: 1px solid #ccc;
+    width: 150px;
+    height: 15px;
+    border-radius: 15px;
+    /* position: absolute; */
+    margin-left: 3px;
+    margin-top: -5px;
+}
+
+
+.tabla-info-temas-pdf .valor{
+    background-image: radial-gradient(circle at 50% -20.71%, #d7c35d 0, #deba54 8.33%, #e4b04d 16.67%, #e9a546 25%, #ed9841 33.33%, #f0893e 41.67%, #f2793c 50%, #f3673d 58.33%, #f35542 66.67%, #f34249 75%, #f22b52 83.33%, #f0065d 91.67%, #ec0069 100%);
+    width: 90%;
+    height: 100%;
+    margin-right: 10px;
+    border-top-left-radius:  5px;
+    border-bottom-left-radius:   5px;
+}
+
+.vertical-line-pdf{ 
+    width: 0.5px; /* Line width */ 
+    background-color: rgb(95, 92, 92); /* Line color */ 
+    height: 100%; /* Override in-line if you want specific height. */ 
+    float: left; /* Causes the line to float to left of content. You can instead use position:absolute or display:inline-block if this fits better with your design */ 
+}
+
+.linea-vertical-pdf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.linea-vertical-pdf span{
+    font-size: 10px;
+    color: rgb(95, 92, 92);
+}
+
+
+

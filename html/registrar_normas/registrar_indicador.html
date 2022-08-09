@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Indicador</title>
+    <link rel="icon" type="image/png" href="../../imagenes/logo_3.png" />
+    <!--Iconos
+    
+    https://www.youtube.com/watch?v=T76bbMVMX6M-->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!--LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--Style-->
+    <link rel="stylesheet" href="../../css/registrar_norma.css">
+
+
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <label class="logo">
+            <img src="../../imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+        <ul>
+            <li class="registrar-norma" onclick="registrar_norma()">
+                Registrar Norma
+            </li>
+            <li class="ver-norma" onclick="mostrar_norma_registarada()">
+                Ver Norma
+            </li>
+            <li class="salir" onclick="menuToggle();"><a class="far fa-user" href="#"></a></li>
+            <div class="menu-salir">
+                <div class="info-user">
+                    <div class="logo-user">
+                        <a class="far fa-user"></a>
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="nombre-user">
+                            <span>Jonnthan</span>
+                        </div>
+                        <div class="correo-user">
+                            <span>jonthancuvi@gameil.com</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li onclick="ir_perfil();"><i class="far fa-user-circle"></i></i>
+                        <a>Mi Perfil</a>
+                    </li>
+                    <!--<li><i class="fas fa-edit"></i><a href="#">Editar Perfil</a></li>-->
+                    <li><i class="fas fa-sign-out-alt"></i><a onclick="salir()">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="contenedor">
+        <div class="titulo-step">
+            <div class="titulo">Registro Norma RSE</div>
+            <div class="stepper-wrapper">
+                <div class="stepper-item active">
+                    <div class="step-counter active"></div>
+                    <div class="step-name">Estandár</div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter active"></div>
+                    <div class="step-name">Dimensión</div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter active"></div>
+                    <div class="step-name">Tema</div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter active"></div>
+                    <div class="step-name">Indicador</div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Preguntas Cualitativas</div>
+                </div>
+                <!-- <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name">Preguntas Cuantitativas</div>
+                </div> -->
+            </div>
+            <!--
+            <div class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step 1</small></div>
+                <div class="step-col"><small>Step 2</small></div>
+                <div class="step-col"><small>Step 3</small></div>
+                <div class="step-col"><small>Step 4</small></div>
+                <div class="step-col"><small>Step 5</small></div>
+                <div class="step-col"><small>Step 6</small></div>
+            </div>
+            -->
+        </div>
+
+        <!--Ingresar Indicadores-->
+        <div class="items-norma-5" id="contenedor_5">
+            <div class="contenedor-general">
+                <div class="contenedor-registrar">
+                    <div class="contenedor-indicadores">
+                        <div class="titulo">
+                            <span>Indicador</span>
+                        </div>
+                        <div class="contenedor-inputs">
+                            <div class="datos-1">
+                                <select id="selector-tema" class="selector-temas">
+                                    <option value="">Elije Tema</option>
+                                    <option value="Desarrollador" id="trabajo">Tema 1</option>
+                                    <option value="Desarrollador" id="trabajo">Tema 2</option>
+                                    <option value="Desarrollador" id="trabajo">Tema 3</option>
+                                </select>
+                            </div>
+                            <div class="datos-1">
+                                <select id="selector-nivel" class="selector-niveles">
+                                    <option value="">Elije Nivel</option>
+                                    <option value="Desarrollador" id="trabajo">Nivel 1</option>
+                                    <option value="Desarrollador" id="trabajo">Nivel 2</option>
+                                    <option value="Desarrollador" id="trabajo">Nivel 3</option>
+                                </select>
+                            </div>
+                            <div class="datos-1">
+                                <input type="text" id="nombre-indicador" placeholder="Nombre Indicador">
+                            </div>
+                            <div class="datos-1">
+                                <!-- <input type="text" id="descripcion-indicador" placeholder="Descripcion Indicador"> -->
+                                <textarea id="descripcion-indicador" placeholder="Descripción Indicador"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!--Botones-->
+                <div class="contenedor-botones">
+                    <div class="boton" onclick="atras()">Atras</div>
+                    <div class="boton" onclick="guardar_indicador();">
+                        <span>Guardar</span>
+                    </div>
+                    <div class="boton" onclick="siguiente()">Siguiente</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.menu-salir');
+        toggleMenu.classList.toggle('active')
+    }
+
+    var tabs = document.querySelectorAll(".tabs ul li");
+    var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+    tabs.forEach(function (tab, tab_index) {
+        tab.addEventListener("click", function () {
+            tabs.forEach(function (tab) {
+                tab.classList.remove("active");
+            })
+            tab.classList.add("active");
+
+            tab_wraps.forEach(function (content, content_index) {
+                if (content_index == tab_index) {
+                    content.style.display = "block";
+                }
+                else {
+                    content.style.display = "none";
+                }
+            })
+
+        })
+    })
+</script>
+<!--Java script-->
+<script src="../../js/urls.js"></script>
+<script src="../../js/js_registrar_norma/registrar_indicador.js"></script>
+
+</html>

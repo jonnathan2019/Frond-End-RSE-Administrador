@@ -1,0 +1,337 @@
+*{
+    font-family: 'Playfair Display', serif;
+font-family: 'Rubik', sans-serif;
+}
+.nav{
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /*box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 0px;*/
+    margin-bottom: 2px;
+}
+.nav .logo{
+    margin-left: 20px;
+    color: #000;
+    font-size: 20px;
+}
+
+.nav .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.nav .opciones{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.nav .opciones li{
+    list-style: none;
+    margin-left: 20px;
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    /*border: 1px solid rgb(107, 101, 101);*/
+}
+
+.nav .opciones li a{
+    text-decoration: none;
+    margin-left: 5px;
+    color: rgb(131, 127, 127);
+}
+.nav .opciones li:hover{
+    background: rgb(71, 71, 241);
+}
+.nav .opciones li:hover a{
+    color: #fff;
+}
+
+/*_________Container_____________________*/
+.contenedor{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../imagenes/mountains.png);
+}
+.wave{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.text-box{
+    width: 60%;
+    padding: 20px 0px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    /*background: rgb(133, 75, 224);
+    background: rgb(89,17,224);
+    background: linear-gradient(0deg, rgba(89,17,224,1) 6%, rgba(174,0,255,1) 92%);*/
+    background: rgb(71, 71, 241);
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.hero-btn:hover{
+    border: 1px solid rgb(158, 109, 236);
+    background: rgb(89,17,224);
+    border: 1px solid #fff;
+    /*background: linear-gradient(0deg, rgb(129, 13, 182) 6%, rgb(206, 135, 240) 92%);*/
+    background: rgb(98, 98, 236);
+    color: #fff;
+    text-decoration: none;
+}
+/*titulo seccion 1*/
+.what-do{
+    background-image: url(../imagenes/patron_1.jpg);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.what-do span{
+    font-size: 50px;
+    font-weight: bold;
+}
+/*seccion 1 EVALUCAION*/
+.evaluacion{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.evaluacion .imgen{
+    width: 45%;
+    height: 350px;
+}
+.evaluacion .imgen img{
+    width: 100%;
+    height: 100%;
+}
+
+.evaluacion .info-evaluacion{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.evaluacion .info-evaluacion .titulo{
+    color: #000;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.steps{
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+     height: 50px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     background: linear-gradient(0deg, rgba(89,17,224,1) 6%, rgba(174,0,255,1) 92%);
+     color: #fff;
+}
+
+.evaluacion .info-evaluacion .informacion{
+    font-size: 23px;
+}
+/*seccion 2 REPORTE*/
+.reportes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(238, 236, 236);
+}
+
+.reportes .imgen{
+    width: 45%;
+    height: 350px;
+}
+.reportes .imgen img{
+    width: 100%;
+    height: 100%;
+}
+
+.reportes .info-reportes{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reportes .info-reportes .titulo{
+    color: #000;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reportes .info-reportes .informacion{
+    font-size: 23px;
+}
+/*seccion 2 QUE EVALUAMOS*/
+.what-evaluate{
+    margin-top: 20px;
+    background-image: url(../imagenes/patron_3.jpg);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.what-evaluate span{
+    font-size: 50px;
+    font-weight: bold;
+}
+/*SOCIAL*/
+.dim-social{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dim-social .imgen{
+    width: 45%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dim-social .imgen img{
+    width: 300px;
+     height: 300px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+}
+
+.dim-social .info-dim-social{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dim-social .info-dim-social .titulo{
+    color: #000;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dim-social .info-dim-social .informacion{
+    font-size: 23px;
+}
+
+
+/*AMbinetal*/
+.dim-ambiental{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(238, 236, 236);
+}
+
+.dim-ambiental .imgen{
+    width: 45%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dim-ambiental .imgen img{
+    width: 300px;
+     height: 300px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+}
+
+.dim-ambiental .info-dim-ambiental{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dim-ambiental .info-dim-ambiental .titulo{
+    color: #000;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dim-ambiental .info-dim-ambiental .informacion{
+    font-size: 23px;
+}
+
+/*Footer*/
+.foter{
+    margin-top: 20px;
+   height: 90px;
+    color: #fff;
+    background-color: #1A237E;
+    /*background: rgb(89,17,224);
+    background: linear-gradient(0deg, rgba(89,17,224,1) 6%, rgba(174,0,255,1) 92%);*/
+    background: rgb(71, 71, 241);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foter .copy-right{
+    margin-left: 20px;
+}
+
+.foter .iconos{
+    margin-right: 20px;
+}
+
+.foter .iconos i{
+    margin-left: 10px;
+}

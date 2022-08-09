@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicar Seccion Administrador</title>
+    <link rel="icon" type="image/png" href="imagenes/logo_3.png" />
+    <!--LIbreria iconos-->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/login_administrador.css">
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <label class="logo">
+            <img src="imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+    </div>
+
+    <div class="container">
+
+        <div class="ingresar-datos">
+            <div class="container-ingresar-datos">
+                <div class="inicar-con">
+                    <span>Bienvenido.</span>
+                </div>
+                <div class="line-separacion">
+                    <div class="line"></div>
+                    <small class="or">O</small>
+                    <div class="line"></div>
+                </div>
+                <div class="iniciar-datos">
+                    <!--______________________----->
+                    <div class="descripcion">
+                        <span>Si tienes una cuenca ingresa con</span>
+                    </div>
+                    <div class="fila">
+                        <label class="mb-1">
+                            <span class="mb-0">Correo Electrónico</span>
+                        </label>
+                        <input class="datos" type="text" id="email-administrador" placeholder="Ingrese su Correo Electrónico">
+                    </div>
+                    <div class="fila">
+                        <label class="mb-1">
+                            <span class="mb-0">Contraseña</span>
+                        </label>
+                        <input class="datos" type="password" id="password-administrador" placeholder="Contraseña">
+                    </div>
+                    <!-- <div class="recordar-recuperar-contrasena">
+                        <div class="custom-control">
+                            <input id="chk1" type="checkbox" name="chk" class="custom-control-input">
+                            <label for="chk1" class="custom-control-label">Recuerdame</label>
+                        </div>
+                        <a href="#">Olvide mi Contraseña?</a>
+                    </div> -->
+                    <div class="boton-login">
+                        <button class="btn" onclick="autentificar_administrador()"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    </div>
+                    <div class="line-separacion">
+                        <div class="line"></div>
+                        <small class="or">O</small>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="registarse">
+                    <div class="descripcion-crear-usuario">
+                        <span>Si eres un nuevo usuario registrate</span>
+                    </div>
+                    <div class="boton">
+                        <button onclick="registrar_administrador()"><i class="fas fa-user-plus"></i> Crear
+                            Cuenta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/urls.js"></script>
+<script src="js/gestionar_usuario_administrador.js"></script>
+
+</html>

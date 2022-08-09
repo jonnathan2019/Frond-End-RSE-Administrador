@@ -1,0 +1,294 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.cuerpo{
+    background: #f1f5f9;
+}
+#check{
+    display: none;
+}
+
+
+.nav{
+    background: #f8f8ff;
+    width: 100%;
+    float: right;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd */
+    border-bottom: 1px solid #e0dddd;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav ul {
+    margin: 20px;
+}
+
+/*__________Icono Superior____________*/
+.nav ul .salir{
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.nav ul .salir:hover{
+    background: rgb(172, 169, 169);
+}
+
+.nav ul .salir a{
+    color: #fff;
+}
+/*__________________menu salir___________________*/
+.nav .menu-salir{
+    /*link tutorial: https://www.youtube.com/watch?v=04u09KBBjfM*/
+    position: absolute;
+    z-index: 10;/*para sobreponer*/
+    width: 15%;
+    left: 84%;
+	top:60px;
+    background: #fff;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+     transition: 0.2s;
+    opacity: 0;
+}
+.nav .menu-salir .info-user{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu-salir .info-user .logo-user{
+    background: #ccc;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.nav .menu-salir .info-user .datos-usuario {
+    width: 100%;
+}
+.nav .menu-salir .info-user .datos-usuario .nombre-user{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav .menu-salir .info-user .datos-usuario .correo-user{
+    font-size: 13px;
+    color: rgb(172, 169, 169);
+    text-align: center;
+}
+
+.nav .menu-salir ul{
+    font-size: 14px;
+    padding: 0px;
+}
+
+.nav .menu-salir.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav .menu-salir ul li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    padding: 5px 0px;
+    color: #ccc;
+    cursor: pointer;
+} 
+
+.nav .menu-salir ul li i{
+    margin-right: 10px;
+   
+}
+.nav .menu-salir ul li a{
+    color: rgb(43, 39, 39);
+    text-decoration: none;
+}
+
+.nav .menu-salir ul li a:hover{
+    color: rgb(172, 169, 169);
+}
+.nav .menu-salir ul li:hover{
+    color: rgb(172, 169, 169);
+}
+
+
+.content{
+    width: 100%;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-left: 15%;
+    transition: 0.5s;
+}
+
+/*_____________________________Conenido____________________*/
+/*Ingresar empresa*/
+.contenido-ingresar-empresa{
+    width: 80%;
+    margin: 2rem auto;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(153, 150, 150, 0.25);
+    border: 1px solid #fff;/*si esnto se coprime el contorno de las preguntas*/
+    border-radius: 5px;
+    }
+
+.contenido-ingresar-empresa .titulo{
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    color: #706d6d;
+}  
+
+.contenedor-inputs{
+    width: 90%;
+    margin: 30px auto;
+}
+.empresa-sector{
+    margin-bottom: 5px;
+}
+
+.empresa-sector, .empresa-ruc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.empresa-sector .datos, .empresa-ruc .datos{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 10px 100px;
+    border-radius: 10px;
+    outline: none;  
+    border: 1px solid #c5c2c2;
+}
+input[type=text]{/*cambiar el color del text de los inpus luego de dar escribir*/
+    color: #000;
+}
+
+input:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+.contenedor-botones{/*para los botoes internos de INDICADORES tambien es*/
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px auto;
+}
+
+.boton{
+    cursor: pointer;
+    background: rgb(71, 71, 241);
+    height: 30px;
+    width: 100px;
+    color: #fff;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.boton a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.boton:hover{
+    background: rgb(118, 118, 241);
+}
+/*Informacion Empresas*/
+.empresas-titulo{
+    width: 80%;
+    border-bottom: 3px solid #ccc;
+    margin: 1px auto;
+    color: #706d6d;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ingresar-empresa{
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+}
+
+.ingresar-empresa .button-ingresar button, .ingresar-empresa .button-continuar button{
+    background: none;
+    border: none;
+    font: inherit;
+    outline: inherit;
+    padding: 5px 10px;
+    color: #706d6d;
+}
+.ingresar-empresa .button-ingresar button i, .ingresar-empresa .button-continuar button i{
+    margin-right: 5px;
+}
+.ingresar-empresa .button-ingresar button:hover, .ingresar-empresa .button-continuar button:hover{
+    color: #fff;
+    border-radius: 15px;
+    background: rgb(98, 98, 236);
+}
+.contenido {
+    width: 80%;
+    margin: 2rem auto;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(153, 150, 150, 0.25);
+    border: 1px solid #fff;/*si esnto se coprime el contorno de las preguntas*/
+    border-radius: 5px;
+    color: #706d6d;
+}
+
+.contenido .titulo-empresa{
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.contenido .info-empresa{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+/*ocultamos el registro de empresa*/
+#contenido-ingresar-empresa{
+    display: none;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Administrador</title>
+    <link rel="icon" type="image/png" href="../imagenes/logo_3.png" />
+    <!--LIbreria iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+  
+    <link rel="stylesheet" href="../css/resgistrar_administrador.css">
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <label class="logo">
+            <img src="../imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+    </div>
+    <div class="container">
+        <div class="ingresar-datos">
+            <div class="container-ingresar-datos">
+                <div class="ingresar-datos-titulo">
+                    <span>Registrarse.</span>
+                </div>
+                <!--______________________-->
+                <div class="line-separacion">
+                    <div class="line"></div>
+                    <small class="or">O</small>
+                    <div class="line"></div>
+                </div>
+                <!--______________________-->
+                <div class="iniciar-datos">
+                    <div class="nombre-apellido">
+                        <!--nombre----->
+                        <div class="fila-nombre">
+                            <label class="mb-1">
+                                <span class="mb-0">Nombre</span>
+                            </label>
+                            <div class="ingresar-nombre">
+                                <i class="fa fa-user"></i>
+                                <input class="datos" type="text" id="nombre_administrador" placeholder="Ingrese su Nombre">
+                            </div>
+                        </div>
+                        <!--apellido-->
+                        <div class="fila-apellido">
+                            <label class="mb-1">
+                                <span class="mb-0">Apellido</span>
+                            </label>
+                            <div class="ingresar-apellido">
+                                <i class="fa fa-user"></i>
+                                <input class="datos" type="text" id="apellido_administrador" placeholder="Ingrese su Apellido">
+                            </div>
+                        </div>
+                    </div>
+                    <!--nombre de usuario-->
+                    <div class="fila-nombre-usuario">
+                        <label class="mb-1">
+                            <span class="mb-0">Nombre Usuario</span>
+                        </label>
+                        <div class="ingresar-nombre-usuario">
+                            <i class="fa fa-user"></i>
+                            <input class="datos" type="text" id="nombre-usuario-administrador"
+                                placeholder="Ingrese su Nombre de Usuario">
+                        </div>
+                    </div>
+                    <!--emaill-->
+                    <div class="fila-email">
+                        <label class="mb-1">
+                            <span class="mb-0">Email</span>
+                        </label>
+                        <div class="ingresar-email">
+                            <i class="fa fa-envelope"></i>
+                            <input class="datos" type="text" id="email-administrador" placeholder="Ingrese su Email">
+                        </div>
+                    </div>
+                    <!--contrasena-->
+                    <div class="contrasena">
+                        <div class="fila-contrasena">
+                            <label class="mb-1">
+                                <span class="mb-0">Contraseña</span>
+                            </label>
+                            <div class="ingresar-contrasena">
+                                <i class="fa fa-lock"></i>
+                                <input class="datos" type="text" id="contrasena-administrador" placeholder="Ingresar Contraseña">
+                            </div>
+                        </div>
+                        <!--confirmar contrasena-->
+                        <div class="fila-contrasena-confir">
+                            <label class="mb-1">
+                                <span class="mb-0">Confirmar Contraseña</span>
+                            </label>
+                            <div class="ingresar-contrasena-confir">
+                                <i class="fa fa-lock"></i>
+                                <input class="datos" type="text" id="contrasena-confir-administrador" placeholder="Confirmar Contraseña">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Crear usuario-->
+                    <div class="boton">
+                        <button onclick="crearUsuario_Administrador()"><i class="fas fa-user-plus"></i> Crear Usuario</button>
+                    </div>
+                    <!--Divisor-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    function menuToggle(){
+            const toggleMenu = document.querySelector('.menu-salir');
+            toggleMenu.classList.toggle('active')
+        }
+</script>
+<script src="../js/urls.js"></script>
+<script src="../js/gestionar_usuario_administrador.js"></script>
+</html>

@@ -1,0 +1,478 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cuerpo{
+    background: #f1f5f9;
+}
+#check{
+    display: none;
+}
+
+
+.nav{
+    background: #f8f8ff;
+    width: 95%;
+    float: right;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd */
+    border-bottom: 1px solid #e0dddd;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav ul {
+    margin: 20px;
+}
+
+/*__________Icono Superior____________*/
+.nav ul .salir{
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.nav ul .salir:hover{
+    background: rgb(172, 169, 169);
+}
+
+.nav ul .salir a{
+    color: #fff;
+}
+/*__________________menu salir___________________*/
+.nav .menu-salir{
+    /*link tutorial: https://www.youtube.com/watch?v=04u09KBBjfM*/
+    position: absolute;
+    z-index: 10;/*para sobreponer*/
+    width: 15%;
+    left: 84%;
+	top:60px;
+    background: #fff;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+     transition: 0.2s;
+    opacity: 0;
+}
+.nav .menu-salir .info-user{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu-salir .info-user .logo-user{
+    background: #ccc;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.nav .menu-salir .info-user .datos-usuario {
+    width: 100%;
+}
+.nav .menu-salir .info-user .datos-usuario .nombre-user{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav .menu-salir .info-user .datos-usuario .correo-user{
+    font-size: 13px;
+    color: rgb(172, 169, 169);
+    text-align: center;
+}
+
+.nav .menu-salir ul{
+    font-size: 14px;
+    padding: 0px;
+}
+
+.nav .menu-salir.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav .menu-salir ul li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    padding: 5px 0px;
+    color: #ccc;
+    cursor: pointer;
+} 
+
+.nav .menu-salir ul li i{
+    margin-right: 10px;
+   
+}
+.nav .menu-salir ul li a{
+    color: rgb(43, 39, 39);
+    text-decoration: none;
+}
+
+.nav .menu-salir ul li a:hover{
+    color: rgb(172, 169, 169);
+}
+.nav .menu-salir ul li:hover{
+    color: rgb(172, 169, 169);
+}
+/*___________________slider_________________________*/
+.sidebar{
+    background-color: rgb(71, 71, 241);
+    color: #fff;
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+    position:fixed; 
+    top:0;
+    z-index: 100;
+    /*overflow: hidden;*/
+}
+
+.sidebar .check1{
+    /*background: salmon;*/
+    margin: 20px;
+    color: #fff;
+
+}
+
+/*_________IMG Encabezado INICIO________________*/
+.sidebar .slider-encabesado{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    top: 15px;
+    left: 45px;
+    font-size: 20px;
+    width: 52.5px;
+    height: 30px;
+    display: none;
+}
+
+#check:checked ~ .sidebar .slider-encabesado{
+    display: inline;
+    
+}
+/*_________IMG Encabezado FIN________________*/
+
+
+.sidebar a{
+    /*background-color: azure;*/
+    display: block;
+    border-bottom: 0.05rem solid #130f24;
+    padding: 20px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar a:hover{
+    background: rgb(98, 98, 236);
+    color: #fff;
+    border-radius: 20px;
+    /*border-bottom-left-radius: 20px;*/
+}
+
+#sidebar_btn:hover{
+    background: #5b35f1;
+    cursor: pointer;
+}
+.sidebar a span{
+    transition: 5s;
+}
+.sidebar a span, .check1 span{
+    display: none;
+}
+
+/*____________Tooltip INICIO_______________*/
+.slider-opcion .texto-emergente{
+    background: rgb(71, 71, 241);
+    position: absolute;
+    padding: 5px 20px;
+    border-radius: 15px;
+    display: inline;
+    left: 105%;
+    visibility: hidden;
+    transition: 0.2s;
+    opacity: 0;
+}
+/*
+.slider-opcion .texto-emergente::before{
+    background: #4b2dd1;
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 6%;
+    top: 26%;
+    transform: translateX(-50%) rotate(45deg);
+}*/
+
+.slider-opcion:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*____________Tooltip FIN_______________*/
+
+
+.content{
+    background: #fff; 
+    width: 95%;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-left: 15%;
+    transition: 0.5s;
+}
+
+
+#check:checked ~ .sidebar{
+    width: 15%;
+    overflow: hidden;
+}
+
+#check:checked ~ .content{
+    width: 85%;
+}
+
+#check:checked ~ .nav{
+    width: 85%;
+    
+}
+
+
+#check:checked ~ .sidebar a span{  
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+}
+
+
+.contenido{
+    width: 95%;
+    margin: 2rem auto;
+}
+
+/*_____________Taps INICIO_________________*/
+
+.wrapper{
+	width: 100%;
+
+}
+
+.tabs ul{
+	display: flex;
+    justify-content: center;
+	background: #fbfbfb;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+
+.tabs ul li{
+	width: 250px;
+	padding: 5px;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #3b3b3b;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+    list-style: none;
+}
+
+.tabs ul li .icon{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.tabs ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #5b35f1;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+	background: #e3dff7;
+	color: #5b35f1;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+	opacity: 1;
+}
+
+.content-tabs{
+	background: #fbfbfb;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.tab_wrap .title{
+	font-size: 20px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+
+/*_____________Taps FIN_________________*/
+
+/*______________CAR principal Inicio_______*/
+
+.card-main{
+    width: 95%;
+    margin: 2rem auto;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    display: flex;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.card-imagen{
+    width: 30%;
+}
+
+.card-content{
+    width: 70%;
+    padding: 2rem;
+
+}
+
+.card-imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.car-title{
+    margin: 10px 0;
+}
+
+.buton-comensar{
+    color: #fff;
+}
+.button{
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    background: rgb(71, 71, 241);
+    border-radius: 0.6rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:hover{
+    background: rgb(98, 98, 236);
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*_________CARDS temas_____*/
+.container-cards{
+    width: 100%;
+    border: 1px solid #dddddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-dim{
+    border: 1px solid #dddddd;
+    width: 40%;
+    font-size: 10px;
+    display: flex;
+    border-radius: 0.6rem;
+    margin: 10px 10px;
+    background: #fff;
+}
+
+.card-imagen-dim{
+    width: 30%;
+    height: 160px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-radius: 0.6rem;
+    height: 100%;
+}
+.card-imagen-dim img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.card-content-dim{
+    width: 70%;
+    padding: 0.5rem;
+}
+
+.card-content-dim .car-title{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.button-dim{
+    padding: 0.3rem 0.5rem;
+    display: inline-block;
+    background: rgb(71, 71, 241);
+    border-radius: 0.6rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-dim:hover{
+    background: rgb(98, 98, 236);
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+

@@ -1,0 +1,1148 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cuerpo{
+    background: #f1f5f9;
+}
+#check{
+    display: none;
+}
+
+
+
+.nav{
+    background: #f8f8ff;
+    width: 95%;
+    float: right;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd */
+    border-bottom: 1px solid #e0dddd;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav ul {
+    margin: 20px;
+}
+
+/*__________Icono Superior____________*/
+.nav ul .salir{
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.nav ul .salir:hover{
+    background: rgb(172, 169, 169);
+}
+
+.nav ul .salir a{
+    color: #fff;
+}
+/*__________________menu salir___________________*/
+.nav .menu-salir{
+    /*link tutorial: https://www.youtube.com/watch?v=04u09KBBjfM*/
+    position: absolute;
+    z-index: 10;/*para sobreponer*/
+    width: 15%;
+    left: 84%;
+	top:60px;
+    background: #fff;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+     transition: 0.2s;
+    opacity: 0;
+}
+.nav .menu-salir .info-user{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu-salir .info-user .logo-user{
+    background: #ccc;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.nav .menu-salir .info-user .datos-usuario {
+    width: 100%;
+}
+.nav .menu-salir .info-user .datos-usuario .nombre-user{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav .menu-salir .info-user .datos-usuario .correo-user{
+    font-size: 13px;
+    color: rgb(172, 169, 169);
+    text-align: center;
+}
+
+.nav .menu-salir ul{
+    font-size: 14px;
+    padding: 0px;
+}
+
+.nav .menu-salir.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav .menu-salir ul li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    padding: 5px 0px;
+    color: #ccc;
+    cursor: pointer;
+} 
+
+.nav .menu-salir ul li i{
+    margin-right: 10px;
+   
+}
+.nav .menu-salir ul li a{
+    color: rgb(43, 39, 39);
+    text-decoration: none;
+}
+
+.nav .menu-salir ul li a:hover{
+    color: rgb(172, 169, 169);
+}
+.nav .menu-salir ul li:hover{
+    color: rgb(172, 169, 169);
+}
+/*___________________slider_________________________*/
+
+.sidebar{
+    background-color: rgb(71, 71, 241);
+    color: #fff;
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+    position:fixed; 
+    top:0;
+    z-index: 100;
+    /*overflow: hidden;*/
+}
+
+.sidebar .check1{
+    /*background: salmon;*/
+    margin: 20px;
+    color: #fff;
+
+}
+
+/*_________IMG Encabezado INICIO________________*/
+.sidebar .slider-encabesado{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    top: 15px;
+    left: 45px;
+    font-size: 20px;
+    width: 52.5px;
+    height: 30px;
+    display: none;
+}
+
+#check:checked ~ .sidebar .slider-encabesado{
+    display: inline;
+    
+}
+/*_________IMG Encabezado FIN________________*/
+
+
+.sidebar a{
+    /*background-color: azure;*/
+    display: block;
+    border-bottom: 0.05rem solid #130f24;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar a:hover{
+    background: rgb(98, 98, 236);
+    color: #fff;
+    border-radius: 20px;
+    /*border-bottom-left-radius: 20px;*/
+}
+
+#sidebar_btn:hover{
+    background: #5b35f1;
+    cursor: pointer;
+}
+.sidebar a span{
+    transition: 5s;
+}
+.sidebar a span, .check1 span{
+    display: none;
+}
+
+/*____________Tooltip INICIO_______________*/
+.slider-opcion .texto-emergente{
+    background: rgb(71, 71, 241);
+    position: absolute;
+    padding: 5px 20px;
+    border-radius: 15px;
+    display: inline;
+    left: 105%;
+    visibility: hidden;
+    transition: 0.2s;
+    opacity: 0;
+}
+/*
+.slider-opcion .texto-emergente::before{
+    background: #4b2dd1;
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 6%;
+    top: 26%;
+    transform: translateX(-50%) rotate(45deg);
+}*/
+
+.slider-opcion:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*____________Tooltip FIN_______________*/
+
+
+.content{
+    background: #fff; 
+    width: 95%;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-left: 15%;
+    transition: 0.5s;
+}
+
+
+#check:checked ~ .sidebar{
+    width: 15%;
+    overflow: hidden;
+}
+
+#check:checked ~ .content{
+    width: 85%;
+}
+
+#check:checked ~ .nav{
+    width: 85%;
+    
+}
+
+
+#check:checked ~ .sidebar a span{  
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+}
+
+
+.contenido{
+    width: 95%;
+    margin: 2rem auto;
+}
+
+/*_____________Resultados Inicio_________________*/
+
+.resultados{
+    background: #fff;
+    width: 100%;
+    height: 60px;
+    float: left;
+    border-bottom: 1px solid #e0dddd;
+}
+
+.titulo-resultado {
+    margin-left: 30px;
+    float: left;
+    line-height: 60px;
+    color: rgb(128, 114, 114);
+    font-size: 20px;
+}
+
+.opciones{
+    float: right;
+    margin-right: 20px;
+}
+
+.opciones li{
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 60px;
+}
+
+.opciones li a{
+    text-decoration: none;
+    color: rgb(128, 114, 114);
+}
+
+
+
+.opciones li a:hover{
+    color: rgb(73, 70, 70);
+}
+
+.opciones li a i{
+    margin: 5px;
+}
+/*_____________Resultados FIN_________________*/
+
+/*_____________Taps INICIO_________________*/
+
+.wrapper{
+	width: 100%;
+	margin: 5rem auto;
+}
+
+.tabs ul{
+	display: flex;
+    justify-content: center;
+	background: #fbfbfb;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+
+
+.tabs ul li{
+	width: 250px;
+	padding: 15px;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #3b3b3b;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+    list-style: none;
+}
+
+
+
+.tabs ul li .icon{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.tabs ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #5b35f1;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+	background: #e3dff7;
+	color: #5b35f1;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+	opacity: 1;
+}
+
+.content-tabs{
+	background: #fbfbfb;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.tab_wrap .title{
+	font-size: 20px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+
+.tab_wrap .title .titulo-graficas{
+    width: 100%;
+}
+
+.tab_wrap .divisor-titulo-graficas{/*00000000000000000000000000000000000000000000000*/
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 5px;
+}
+/*segundo tab de graficas*/
+.tabs-1 ul{
+    display: flex;
+    justify-content: center;
+	background: #fff;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+
+
+.tabs-1 ul li{
+	width: 250px;
+	padding: 5px;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #3b3b3b;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+    list-style: none;
+}
+
+
+
+.tabs-1 ul li .icon{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.tabs-1 ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs-1 ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #5b35f1;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.tabs-1 ul li:hover,
+.tabs-1 ul li.active{
+	background: #e3dff7;
+	color: #5b35f1;
+}
+
+.tabs-1 ul li:hover:before,
+.tabs-1 ul li.active:before{
+	opacity: 1;
+}
+
+.content-tabs-1{
+	background: #fff;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	padding: 20px;
+}
+/*_____________Taps FIN_________________*/
+/*_____________COntaniner puntaje total Inicio_________________*/
+.puntaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background: #fff;
+}
+.puntaje .info-general{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.puntaje .info-total,.puntaje .puntaje-total,.puntaje .grafica-general{
+    background: #fff;
+    border: 1px solid #dddddd;
+    width: 30%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.puntaje .info-temas-indicadores{
+    border: 1px solid #dddddd;
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #fff;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.puntaje .info-temas-indicadores .titulo-temas-inidcadores{
+    width: 97%;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 5px;
+    margin: 10px;
+}
+
+.puntaje .info-temas-indicadores .tabla-temas-indicadores{
+    width: 97%;
+    margin-bottom: 10px;
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.25); */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.puntaje-total {
+    text-align: center;
+
+}
+
+.barra_progres_total progress{
+    width: 85%;
+}
+
+.puntaje-total-valor-numerico span{
+    font-size: 70px;
+}
+
+
+.tab_content .title{
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+/*__________________________________________________________*/
+.puntaje-dimensiones{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.info-total-dimension-social, .info-total-dimension-ambiental{
+    background: #fff;
+    border: 1px solid #dddddd;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.info-total-dimension-social .title{
+    background: rgba(148, 194, 235,0.2);
+}
+
+.info-total-dimension-ambiental .title{
+    background: rgba(140, 209, 191, 0.2);
+}
+
+.retroalimentacion-puntaje{
+    width: 100%;
+    display: flex;
+    /* esto no estaba */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.retroalimentacio-puntaje-dim{
+    width: 65%;/*era 70 antes*/
+    /* height: 100%; */
+    /* border: 1px solid #dddddd; */
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 5px;
+  }
+
+.retroalimentacion-social, .retroalimentacion-ambiental{
+    width: 95%;
+    margin: 10px auto;
+}
+  
+.titulo-retroalimentacion-puntaje{
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid #e0dddd;
+    background: #f1f5f9;
+}
+
+.puntaje-dimension{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    /* border: 1px solid #dddddd; */
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 5px;
+}
+
+.barra_progres_social, .barra_progreso_ambiental{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+}
+
+/* .puntaje-dimension .puntaje-numerico{
+    font-size: 28px;
+}
+
+.barra_progres_social progress, .barra_progreso_ambiental progress{
+    width: 80%;
+} */
+.tablas-puntajes-totales-dimensiones{
+
+    margin-top: 10px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;/*esto no estaba*/
+    
+}
+.temas-clasficacion{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #dddddd;
+    background: #f1f5f9;
+    
+}
+
+.temas-clasficacion p{
+    margin: 5px;
+}
+
+
+.opciones-mejora{
+    display: flex;
+    justify-content: center;
+}
+
+.container-info{
+    border: 0.01px solid #dddddd;
+    width: 35%;
+}
+
+.tema-puntaje{
+    display: flex;
+    border-bottom: 0.3px solid #dddddd;
+    font-size: 10px;
+    text-transform: lowercase;
+}
+
+
+.titulo-info{
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 0.5px solid #dddddd;    
+}
+
+
+#estable{
+    background: rgba(140, 209, 191, 0.2);
+}
+#poco-estable{
+    background: rgba(194, 209, 140, 0.2);
+}
+#no-estable{
+    background: rgba(209, 140, 140, 0.2);
+}
+.tema-info{
+    width: 80%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.puntaje-info{
+    width: 10%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+/*_____________COntaniner puntaje total FIN_________________*/
+
+/*_________________________Graficas INICIO________________________________*/
+
+
+.grafica-temas, .grafica-dimension{
+    text-align: center;
+}
+
+.contenedor-graficas-temas, .contenedor-graficas-dimensiones{
+    border: 1px solid #dddddd; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#grafica-polar{
+    border: 1px solid #dddddd; 
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#grafica-radar{
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #dddddd; 
+    /* width: 600px;
+    height: 550px; */
+}
+
+#grafica-polar{
+    display: none;
+}
+
+.info-temas-titulo, .info-dim-titulo{
+    border-bottom: 3px solid #ccc;
+    color: #706d6d;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+select{
+    padding: 0px 30px;
+    border-radius: 15px;
+    outline: none;  
+    border: none;
+    color: #706d6d;
+    background: #f1f5f9;
+    cursor: pointer;
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.25); */
+    border: 1px solid #ccc;
+}
+
+select:hover{
+    background: rgb(118, 118, 241);
+    color: #fff;
+}
+
+.elegir-vista-graficas-temas, .info-temas-titulo{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.elegir-vista-graficas-dim, .info-dim-titulo{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+/*____________________________________________________________*/
+
+/*_________________________Graficas FIN________________________________*/
+
+.tabla-info-temas{
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+.tabla-info-temas .tabla-cabecera-temas .cabecera-titutlo{
+    display: flex;   
+    border-bottom: solid 5px #0F362D;
+    font-weight: bold;
+}
+
+.tabla-info-temas .tabla-cabecera-temas .cabecera-titutlo .titulo-nombre{
+    width: 40%;
+    display: flex;
+}
+
+.tabla-info-temas .tabla-cabecera-temas .cabecera-titutlo .titulo-valor, .tabla-info-temas .tabla-cabecera-temas .cabecera-titutlo .titulo-impacto{
+    width: 30%;
+    text-align: center;
+}
+
+
+.tabla-info-temas .titulo, .tabla-info-temas .fila .fila-contenct{
+	padding: 20px;
+}
+
+.tabla-info-temas .titulo, .tabla-info-temas .fila .fila-contenct img{
+    margin-right: 10px;
+}
+.tabla-info-temas .cuerpo-tabla-temas .fila .info-tema{
+    display: flex;
+}
+
+
+.tabla-info-temas .cuerpo-tabla-temas .fila .nom-img-temas{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.tabla-info-temas .cuerpo-tabla-temas .fila .impacto-tema, .tabla-info-temas .cuerpo-tabla-temas .fila .barra-tema{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabla-info-temas .contenido-indicador:nth-child(even){
+	background-color: #ddd;
+    background: #f1f5f9;
+    border-bottom: 0.3px solid #ccc;
+    border-top:  0.3px solid #ccc;
+}
+
+.tabla-info-temas .cuerpo-tabla-temas .fila .info-tema:hover{
+	background-color: #369681;
+    background: rgb(118, 118, 241);
+	color: white;
+    cursor: pointer;
+}
+
+.tabla-info-temas  .imagen{
+    height:30px;
+   width:30px;
+   -moz-border-radius:50px;
+   -webkit-border-radius:50px;
+   border-radius:50px;
+   margin-right: 5px;
+   left: 0px;
+   border: 1px solid #ccc;
+}
+
+.grafica-barra-temas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 163px;
+}
+
+.tabla-info-temas .contorno{
+    background: rgb(241, 241, 227);
+    border: 1px solid #ccc;
+    width: 152px;
+    height: 15px;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: -5px;
+}
+
+
+.tabla-info-temas .valor{
+    background-image: radial-gradient(circle at 50% -20.71%, #d7c35d 0, #deba54 8.33%, #e4b04d 16.67%, #e9a546 25%, #ed9841 33.33%, #f0893e 41.67%, #f2793c 50%, #f3673d 58.33%, #f35542 66.67%, #f34249 75%, #f22b52 83.33%, #f0065d 91.67%, #ec0069 100%);
+    width: 90%;
+    height: 100%;
+    margin-right: 10px;
+    border-top-left-radius:  5px;
+    border-bottom-left-radius:   5px;
+}
+
+.vertical-line{ 
+    width: 0.5px; /* Line width */ 
+    background-color: rgb(95, 92, 92); /* Line color */ 
+    height: 100%; /* Override in-line if you want specific height. */ 
+    float: left; /* Causes the line to float to left of content. You can instead use position:absolute or display:inline-block if this fits better with your design */ 
+}
+
+.linea-vertical{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.linea-vertical span{
+    font-size: 10px;
+    color: rgb(95, 92, 92);
+}
+
+
+
+/*_________________________________________________________________-*/
+#chart {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#chart path {
+    fill: none;
+}
+
+/* layers */
+#chart .layer-0 path {
+    fill: steelblue;
+}
+
+#chart .layer-1 path {
+    fill: white !important;
+    opacity: 0.3;
+    stroke-width: 2px;
+    stroke: #999;
+}
+
+/* Outer circle, tick-circles and spokes */
+#chart circle.outer {
+    stroke: #000;
+    stroke-dasharray: 4, 4;
+}
+
+#chart .tick-circles circle {
+    stroke: rgb(160, 157, 157);/*circulo interiror*/
+    stroke-dasharray: 2, 2;
+}
+
+#chart .spokes line {
+    stroke: #000;/*lineas*/
+    stroke-width: 0.2;
+}
+
+/* Axis */
+#chart .axis text {
+    font-size: 11px;
+}
+
+#chart .axis path {
+    stroke: rgb(160, 157, 157);/*linea principal*/
+    shape-rendering: crispEdges;
+}
+
+#chart .axis line {
+    stroke: rgb(160, 157, 157);/*guion de los numeros*/
+    shape-rendering: crispEdges;
+}
+
+/* Labels */
+#chart .labels text {
+    fill: #000;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* update button */
+#update {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/*____________________________________________*/
+#bar-dimesniones{
+    border: 1px solid #ccc;
+    width: 60%;
+    margin: 10px auto;
+}
+
+#radial-dimensiones{
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 10px auto;
+    display: none;
+}
+
+/*_______ INDICACORES Tabla_________*/
+.tabla-info-indicadores{
+    background: #fbfbfb;
+    background: #f1f5f9;
+    background: rgba(184, 179, 179, 0.28);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding: 20px;
+}
+.tabla-info-indicadores .tabla-indicadores-titulo{
+    width: 70%;
+    border: 1px solid #ccc;
+    margin: auto;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cabecera-tabla{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    border-bottom: solid 5px #0F362D;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cabecera-tabla .titulo-1{
+    padding: 10px;
+    width: 75%;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cuerpo-tabla .contendio-1{
+    padding: 10px;
+    width: 75%;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cabecera-tabla .titulo-2{
+    padding: auto;
+    width: 25%;
+    text-align: center;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cuerpo-tabla .contenido-2{
+    padding: auto;
+    width: 25%;
+    text-align: center;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cuerpo-tabla .cuerpo-fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.tabla-info-indicadores .tabla-indicadores-titulo .cuerpo-tabla .cuerpo-fila:nth-child(even){
+	background-color: #ddd;
+    background: #f1f5f9;
+    border-bottom: 0.3px solid #ccc;
+    border-top:  0.3px solid #ccc;
+}
+
+.mostrar-info-indicadores{
+    background: chartreuse;
+}
+
+.contenido-indicador.active .tabla-info-indicadores{
+    display: block;
+}
+
+/* ______________grafica BARRAS DIMENSIONES________________ */
+#grafica-bar-dim {
+    /* width: 700px;
+    height: 500px; */
+    margin: auto;
+    background-color: #2F4A6D;
+    background-color: #fff;
+}
+/* 
+svg {
+    width: 100%;
+    height: 100%;
+} */
+
+.barras_dim {
+    fill: #80cbc4;
+}
+
+text {
+    font-size: 12px;
+    fill: #fff;
+    fill: black;
+}
+
+/* path {
+    stroke: gray;
+} */
+
+line {
+    stroke: gray;
+}
+
+line#limit {
+    stroke: #FED966;
+    stroke-width: 3;
+    stroke-dasharray: 3 6;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+.grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.3;
+}
+
+text.divergence {
+    font-size: 12px;
+    fill: #2F4A6D;
+}
+
+text.value {
+    font-size: 12px;
+}
+
+text.title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+text.label {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+text.source {
+    font-size: 10px;
+}
+/* ______________________ GRAFICA Dona Dimensiones __________________ */
+
+        /*Styling for the lines connecting the labels to the slices*/
+        polyline {
+            opacity: .3;
+            stroke: black;
+            stroke-width: 2px;
+            fill: none;
+        }
+
+        /* Make the percentage on the text labels bold*/
+        .labelName tspan {
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* In biology we generally italicise species names. */
+        .labelName {
+            font-size: 0.9em;
+            font-style: italic;
+        }

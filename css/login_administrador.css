@@ -1,0 +1,219 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*_______________________________________________*/
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #f1f5f9;
+    background-image: url(../imagenes/mountains.png);
+}
+
+.nav{
+    background: #f8f8ff;
+    width: 100%;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd 
+    border-bottom: 1px solid #e0dddd;*/
+    height: 65px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+.container{
+    margin: 20px;
+    width: 40%;
+    box-shadow: 0 2px 5px 0 rgba(71, 69, 69, 0.5);
+    border-radius: 15px;
+    background: #fff;
+}
+
+
+
+.line-separacion-vertical .line{
+    width: 1px;
+    height: 50%;
+    border-top: solid #ACC0D8 1px;
+}
+
+.container .ingresar-datos{
+    width: 100%;
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+.container .decripcion .imagen{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container .decripcion .imagen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0.6;
+}
+*/
+.container-ingresar-datos{
+    font-size: 14px;
+    font-weight: bold;
+    width: 70%;   
+}
+
+.inicar-con{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicar-con span{
+    margin: 20px;
+    font-size: 20px;
+}
+.line-separacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.line-separacion .or{
+    margin: 0px 20px;
+}
+
+.line-separacion .line{
+    width: 50%;
+    height: 1px;
+    border-top: solid #c5c2c2 1px;
+    
+}
+
+.descripcion{
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    color: #706d6d;
+
+}
+
+.descripcion-crear-usuario{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    color: #706d6d;
+}
+
+.iniciar-datos{
+    margin-top: 20px;
+}
+
+.fila .datos{
+    outline: none;  
+    width: 95%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border-radius: 15px;
+    border: 1px solid #c5c2c2;
+}
+
+.fila .datos:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+.recordar-recuperar-contrasena{
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+}
+
+.recordar-recuperar-contrasena a{
+    text-decoration: none;
+}
+
+.recordar-recuperar-contrasena a:hover{
+    color: rgb(43, 42, 41);
+}
+
+.recordar-recuperar-contrasena, .recordar-recuperar-contrasena a{
+    color: rgb(133, 132, 130);
+}
+
+.boton-login{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.boton-login button{
+    width: 100%;
+    background: rgb(71, 71, 241);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    outline: none;
+}
+
+.boton-login button:hover{
+    background: rgb(98, 98, 236);;
+    cursor: pointer;
+    color: #fff;
+}
+
+.registarse a{
+    text-decoration: none;
+    color: crimson;
+}
+
+.registarse a:hover{
+    color: rgb(235, 118, 142);
+}
+/*_______________________________________________*/
+
+.boton{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.boton button{
+    width: 100%;
+    background: coral;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    outline: none;
+}
+
+.boton button:hover{
+    background: rgb(241, 155, 123);
+}

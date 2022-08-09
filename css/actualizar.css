@@ -1,0 +1,791 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.cuerpo{
+    background: #f1f5f9;
+}
+#check{
+    display: none;
+}
+
+
+.nav{
+    background: #f8f8ff;
+    /* width: 95%; con slider */
+    width: 100%;
+    float: right;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd */
+    border-bottom: 1px solid #e0dddd;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav ul {
+    margin: 20px;
+}
+
+/*__________Icono Superior____________*/
+.nav ul .salir{
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.nav ul .salir:hover{
+    background: rgb(172, 169, 169);
+}
+
+.nav ul .salir a{
+    color: #fff;
+}
+/*__________________menu salir___________________*/
+.nav .menu-salir{
+    /*link tutorial: https://www.youtube.com/watch?v=04u09KBBjfM*/
+    position: absolute;
+    z-index: 10;/*para sobreponer*/
+    width: 15%;
+    left: 84%;
+	top:60px;
+    background: #fff;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+     transition: 0.2s;
+    opacity: 0;
+}
+.nav .menu-salir .info-user{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu-salir .info-user .logo-user{
+    background: #ccc;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.nav .menu-salir .info-user .datos-usuario {
+    width: 100%;
+}
+.nav .menu-salir .info-user .datos-usuario .nombre-user{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav .menu-salir .info-user .datos-usuario .correo-user{
+    font-size: 13px;
+    color: rgb(172, 169, 169);
+    text-align: center;
+}
+
+.nav .menu-salir ul{
+    font-size: 14px;
+    padding: 0px;
+}
+
+.nav .menu-salir.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav .menu-salir ul li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    padding: 5px 0px;
+    color: #ccc;
+    cursor: pointer;
+} 
+
+.nav .menu-salir ul li i{
+    margin-right: 10px;
+   
+}
+.nav .menu-salir ul li a{
+    color: rgb(43, 39, 39);
+    text-decoration: none;
+}
+
+.nav .menu-salir ul li a:hover{
+    color: rgb(172, 169, 169);
+}
+.nav .menu-salir ul li:hover{
+    color: rgb(172, 169, 169);
+}
+/*___________________slider_________________________*/
+.sidebar{
+    background-color: #270e8a;
+    background-color: rgb(71, 71, 241);
+    color: #fff;
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s;
+    position:fixed; 
+    top:0;
+    z-index: 100;
+    /*overflow: hidden;*/
+}
+
+.sidebar .check1{
+    /*background: salmon;*/
+    margin: 20px;
+    color: #fff;
+
+}
+/*_________IMG Encabezado INICIO________________*/
+.sidebar .slider-encabesado{
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    top: 15px;
+    left: 45px;
+    font-size: 20px;
+    width: 52.5px;
+    height: 30px;
+    display: none;
+}
+
+#check:checked ~ .sidebar .slider-encabesado{
+    display: inline;
+    
+}
+/*_________IMG Encabezado FIN________________*/
+
+
+.sidebar a{
+    /*background-color: azure;*/
+    display: block;
+    border-bottom: 0.05rem solid #130f24;
+    padding: 20px 20px;
+    color: #fff;
+}
+
+.sidebar a:hover{
+    background: rgb(98, 98, 236);
+    color: #fff;
+    border-radius: 20px;
+    /*border-bottom-left-radius: 20px;*/
+}
+
+#sidebar_btn:hover{
+    background: #5b35f1;
+    cursor: pointer;
+}
+.sidebar a span{
+    transition: 5s;
+}
+.sidebar a span, .check1 span{
+    display: none;
+}
+
+/*____________Tooltip INICIO_______________*/
+.slider-opcion .texto-emergente{
+    background: rgb(71, 71, 241);
+    position: absolute;
+    padding: 5px 20px;
+    border-radius: 15px;
+    display: inline;
+    left: 105%;
+    visibility: hidden;
+    transition: 0.2s;
+    opacity: 0;
+}
+/*
+.slider-opcion .texto-emergente::before{
+    background: #4b2dd1;
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 6%;
+    top: 26%;
+    transform: translateX(-50%) rotate(45deg);
+}*/
+
+.slider-opcion:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*____________Tooltip FIN_______________*/
+.content{
+    /* width: 95%; con slider */
+    width: 100%;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-left: 15%;
+    transition: 0.5s;
+}
+
+
+#check:checked ~ .sidebar{
+    width: 15%;
+    overflow: hidden;
+}
+
+#check:checked ~ .content{
+    width: 85%;
+}
+
+#check:checked ~ .nav{
+    width: 85%;
+    
+}
+
+
+#check:checked ~ .sidebar a span{  
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+}
+
+/*______________CAR INICIO_______*/
+
+
+/*______________CAR FIN_______*/
+
+/*_________Estandar INICIO______________*/
+
+.content .items-norma-2{
+    width: 70%;
+    margin: 0rem auto;
+}
+
+.content .contenedor-general{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;;
+
+}
+
+.content .contenedor-general .titulo{    
+    border-bottom:  1px solid #ccc;
+    width: 100%;
+    padding: 10px 0px;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;/*para todos los titulos con negritas*/
+}
+
+.content .contenedor-general .titulo span{
+    margin-left: 20px;
+    font-size: 15px;
+    color: #706d6d;
+}
+
+.contenedor-general .contenedor-registrar{
+    width: 100%;
+    margin: 15px auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs{
+    width: 90%;
+    margin-top: 10px;
+}
+
+.nombre-pais, .ano-vigencia, .vercion-pais, .region-pais, .fechas-modificacion-creacion{
+    margin: 3px 0px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/*__INPUTS estandar inicio__*/
+.nombre-pais .datos-1, .ano-vigencia .datos-1, .vercion-pais .datos-1, .region-pais .datos-1, .fechas-modificacion-creacion .datos-1{
+    width: 47%;
+}
+
+.nombre-pais .datos-1 input, .ano-vigencia .datos-1 input, .vercion-pais .datos-1 input, .region-pais .datos-1 input, .fechas-modificacion-creacion .datos-1 input{
+    width: 100%;
+}
+/*__INPUTS estandar FIN__*/
+
+label{
+    font-size: 13px;
+    /* color: rgb(126, 121, 121);*/
+}
+
+#descripcion-estandar, #descripcion-dimension, #descripcion-tema, #descripcion-indicador{
+    font-size: 13px;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ccc;
+}
+#descripcion-estandar:focus, #descripcion-dimension:focus, #descripcion-tema:focus, #descripcion-indicador:focus{
+    border: 2px solid rgb(71, 71, 241);
+    outline: 0;
+}
+
+
+.contener-inputs .datos-1 input{
+    padding: 3px 10px;
+    outline: none;  
+    /*border: 1px solid #c5c2c2;*/
+    margin-bottom: 5px;
+    font-size: 13px;
+    /* color: rgb(126, 121, 121);*//*para cambiar el color de las fechas*/
+}
+/*___INPUTS todos INICIO___*/
+input{
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+input[type=text]{/*cambiar el color del text de los inpus luego de dar escribir*/
+    color: #000;
+}
+
+input:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+/*___INPUTS todos FIN___*/
+/*______SELECTOR todo INICIO________*/
+#selector, #selector-prioridad-nivel{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+
+#selector-tema, #selector-nivel{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+
+#selector:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+#selector-prioridad-nivel:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+#selector-tema:focus, #selector-nivel:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+#selector_pregunta, #selector_pregunta_cuantitativa{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+
+#selector_pregunta:focus, #selector_pregunta_cuantitativa:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+/*______SELECTOR todo FIN________*/
+
+.contenedor-botones{/*para los botoes internos de INDICADORES tambien es*/
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.boton{
+    cursor: pointer;
+    background: rgb(71, 71, 241);
+    height: 30px;
+    width: 100px;
+    color: #fff;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.boton a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.boton:hover{
+    background: rgb(118, 118, 241);
+}
+/*_________Estandar FIN______________*/
+
+/*_________Dimensiones INICIO___________________*/
+.content .items-norma-3{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+
+.content  .titulo{    
+    border-bottom:  1px solid #ccc;
+    width: 100%;
+    padding: 5px 0px;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;/*para todos los titulos con negritas*/
+}
+
+.content  .titulo span{
+    margin-left: 20px;
+    font-size: 15px;
+    color: #706d6d;
+}
+
+.contenedor-registrar .contener-inputs{
+    width: 90%;
+    margin-top: 10px;
+}
+
+
+.contenedor-registrar{/*para TEMAS tambien se aplica*/
+    width: 90%;
+    margin-top: 20px;   
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-registrar .contenedor-dimenision {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.contenedor-registrar .contenedor-dimenision .titulo{
+    border-bottom:  1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.contenedor-registrar .contenedor-inputs{/*para TEMAS tambien se aplica*/
+    margin: 5px 0px;
+    width: 100%;
+    /*border: 1px solid #ccc;*/
+ }
+ .contenedor-registrar .contenedor-inputs .datos-1{/*para TEMAS tambien se aplica*/
+     width: 100%;
+     /*background: cornsilk;*/
+     margin: 5px auto;
+     margin-bottom: 15px;
+     
+ }
+
+.contenedor-registrar .contenedor-inputs .datos-1 input, .contenedor-registrar .contenedor-inputs .datos-1 #selector, .contenedor-inputs .datos-1 #selector-prioridad-nivel, .contenedor-inputs .datos-1 #selector-tema, .contenedor-inputs .datos-1 #selector-nivel{/*para TEMAS tambien se aplica*/
+    width: 100%;
+    padding: 3px 10px;
+    outline: none;  
+    /*border: 1px solid #c5c2c2;*/
+    font-size: 13px;
+    /* color: rgb(126, 121, 121);*//*para cambiar el COLOR de select y de todo creo */
+    }
+/*_________Dimensiones FIN___________________*/
+
+/*__________Tema INICIO_______________________*/
+.contenedor .items-norma-4{
+    width: 80%;
+    margin: 0rem auto;
+}
+/*
+.contenedor-general-tema-nivel{
+    width: 60%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: rgb(170, 43, 43);;
+}*/
+.contenedor-registrar .contenedor-tema, .contenedor-registrar .contenedor-nivel {
+    width: 78%;/*antes etsava 90 si eliminar lo de arriva*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.contenedor-registrar .contenedor-tema .titulo, .contenedor-registrar .contenedor-nivel .titulo{
+    border-bottom:  1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+/*__________Tema FIN_______________________*/
+/*_____________Indicaodr INICIO_____________________*/
+
+.contenedor .items-norma-5{
+    width: 80%;
+    margin: 0rem auto;
+}
+.contenedor-registrar .contenedor-indicadores, .contenedor-registrar .contenedor-estadio-unico {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.contenedor-registrar .contenedor-indicadores .titulo, .contenedor-registrar .contenedor-estadio-unico .titulo{
+    border-bottom:  1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+/*Mostrar las dimensiones de los estandares*/
+.titulo-imputs{
+    width: 95%;
+    margin: 20px auto;
+}
+.dimeniones-estandar, .info-estandar, .preguntas-indicador, .info-dimension, .info-temas{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-bottom: 3px solid #ccc;
+}
+
+.dimeniones-estandar, .info-estandar{
+    width: 90%;
+}
+
+/*codigo tablas */
+.tablas{
+    width: 90%;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(153, 150, 150, 0.25);
+    margin-bottom: 10px;
+}
+
+.tabal-dimensiones, .tabla-indicador, .tabla-temas{
+    width: 100%;
+}
+
+
+
+.tablas .titulo{
+    background: rgb(71, 71, 241);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+table{
+	background: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+    font-size: 10px;
+}
+
+
+th, td{
+	padding: 5px;
+    text-align: center;
+    border: 0.2px solid #ccc;
+}
+
+thead{
+	background: #fff;
+	border-top: solid 1px #ccc;
+    border-bottom: solid 2px #0F362D;
+	color: rgb(100, 99, 99);
+    text-align: center;
+}
+ button{
+    background: rgb(71, 71, 241);
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 15px 15px;
+}
+
+button:focus{
+    outline:none !important;
+}
+button:hover{
+    background: rgb(118, 118, 241);
+    }
+
+#actualizar{
+    background: #39e447;
+}
+
+#eliminar{
+    background: #eb3939;
+}
+
+#actualizar:hover{
+    background: #8beb93;
+}
+
+#eliminar:hover{
+    background: #f58686;
+}
+/*parq actualizar preguntas*/
+textarea{
+    font-size: 13px;
+    border-radius: 5px;
+    width: 450px;
+    height: 50px;
+}
+textarea:focus{
+    border: 2px solid rgb(71, 71, 241);
+    outline: 0;
+}
+
+/*_____________Taps INICIO_________________*/
+
+.wrapper{
+	width: 90%;
+	margin: 1rem auto;
+}
+
+.tabs ul{
+	display: flex;
+    justify-content: center;
+	background: #fbfbfb;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin-bottom: 25px;
+}
+
+
+.tabs ul li{
+	width: 300px;
+	padding: 3px;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #3b3b3b;
+	/* text-transform: uppercase; */
+	font-size: 14px;
+    font-weight: bold;
+	/* font-weight: 600; */
+	/* letter-spacing: 3px; */
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: relative;
+    list-style: none;
+}
+
+
+
+.tabs ul li .icon{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.tabs ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #5b35f1;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+	background: #e3dff7;
+	color: #5b35f1;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+	opacity: 1;
+}
+
+.content-tabs{
+	background: #fbfbfb;
+    background: #fff;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	/* padding: 20px; */
+}
+
+.tab_wrap .title{
+	font-size: 20px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+
+.tab_wrap .title .titulo-graficas{
+    width: 100%;
+}
+
+.tab_wrap .divisor-titulo-graficas{/*00000000000000000000000000000000000000000000000*/
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 5px;
+}
+/*_____________Taps FIN_________________*/

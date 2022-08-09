@@ -1,0 +1,158 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*_______________________________________________*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f1f5f9;
+    background-image: url(../imagenes/mountains.png);
+}
+
+.nav{
+    background: #f8f8ff;
+    width: 100%;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd 
+    border-bottom: 1px solid #e0dddd;*/
+    height: 65px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.container{
+    margin: 40px;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(71, 69, 69, 0.5);
+    background: #fff;   
+}
+.ingresar-datos{
+    width: 100%;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.container-ingresar-datos{
+    font-size: 14px;
+    font-weight: bold;
+    width: 80%;
+    margin: 30px;
+}
+
+.container-ingresar-datos .ingresar-datos-titulo{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+    
+
+.line-separacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.line-separacion .or{
+    margin: 0px 20px;
+}
+
+.line-separacion .line{
+    width: 50%;
+    height: 1px;
+    border-top: solid #c5c2c2 1px;
+    
+}
+/*_______________________________________________*/
+/*___________________INICIO Inputs________________________*/
+.nombre-apellido{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contrasena{
+    display: flex;
+    justify-content: space-between;
+}
+.fila-nombre, .fila-apellido, .fila-contrasena, .fila-contrasena-confir{
+    width: 45%;
+}
+.ingresar-nombre, .ingresar-apellido, .ingresar-nombre-usuario, .ingresar-email, .ingresar-telefono, .ingresar-trabajo, .ingresar-contrasena, .ingresar-contrasena-confir{
+    text-align: center;
+    border: 1px solid #c5c2c2;
+    border-radius: 15px;
+    margin: 5px 0px;
+}
+/*tamano de inputs*/
+.ingresar-nombre input, .ingresar-apellido input, .ingresar-nombre-usuario input, .ingresar-email input, .ingresar-telefono input, .ingresar-trabajo select, .ingresar-contrasena input, .ingresar-contrasena-confir input{
+    outline: none;  
+    padding: 12px 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+/*definimos el espacio a utilizar de inputs and iconos(i)*/
+.ingresar-nombre i, .ingresar-apellido i, .ingresar-nombre-usuario i, .ingresar-email i, .ingresar-telefono i, .ingresar-trabajo i, .ingresar-contrasena i, .ingresar-contrasena-confir i{
+    width:5%;
+}
+
+.fila-nombre i, .fila-apellido i, .fila-contrasena i, .fila-contrasena-confir i{
+    width: 10%;
+}
+
+.ingresar-nombre input, .ingresar-apellido input, .ingresar-contrasena input, .ingresar-contrasena-confir input{
+    width: 79%;
+}
+
+.ingresar-nombre-usuario input, .ingresar-email input, .ingresar-telefono input{
+    width: 90%;
+}
+/*
+input:focus {
+    border: 2px solid rgb(71, 71, 241);;
+}*/
+/*___________________FIN Inputs________________________*/
+/*______________ Boton crear usuario___________________*/
+.boton{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boton button{
+    width: 100%;
+    background: rgb(71, 71, 241);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    outline: none;
+}
+
+.boton button:hover{
+    background: rgb(98, 98, 236);
+}
+

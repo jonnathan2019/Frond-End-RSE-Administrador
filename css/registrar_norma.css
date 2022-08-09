@@ -1,0 +1,835 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #f1f5f9;
+    background-image: url(../imagenes/mountains.png);
+}
+
+.nav{
+    background: #f8f8ff;
+    width: 100%;
+    transition: 0.5s;
+    /*color del vorde inferior antes: #e0dddd 
+    border-bottom: 1px solid #e0dddd;*/
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav .logo {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+.nav ul {
+    margin: 20px;
+}
+
+.ver-norma, .registrar-norma{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 3px 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc; 
+    float: left;
+    margin-right: 10px;  
+    font-size: 14px;
+    cursor: pointer;
+    color: #4e4d4d;
+}
+
+.ver-norma:hover, .registrar-norma:hover{
+    background: rgb(118, 118, 241);
+    color: #fff;
+}
+/*__________Icono Superior____________*/
+.nav ul .salir{
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.nav ul .salir:hover{
+    background: rgb(172, 169, 169);
+}
+
+.nav ul .salir a{
+    color: #fff;
+}
+/*__________________menu salir___________________*/
+.nav .menu-salir{
+    /*link tutorial: https://www.youtube.com/watch?v=04u09KBBjfM*/
+    position: absolute;
+    z-index: 10;/*para sobreponer*/
+    width: 15%;
+    left: 84%;
+	top:60px;
+    background: #fff;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+     transition: 0.2s;
+    opacity: 0;
+}
+.nav .menu-salir .info-user{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .menu-salir .info-user .logo-user{
+    background: #ccc;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.nav .menu-salir .info-user .datos-usuario {
+    width: 100%;
+}
+.nav .menu-salir .info-user .datos-usuario .nombre-user{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.nav .menu-salir .info-user .datos-usuario .correo-user{
+    font-size: 13px;
+    color: rgb(172, 169, 169);
+    text-align: center;
+}
+
+.nav .menu-salir ul{
+    font-size: 14px;
+    padding: 0px;
+}
+
+.nav .menu-salir.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav .menu-salir ul li{
+    list-style: none;
+    border-top: 1px solid #ccc;
+    padding: 5px 0px;
+    color: #ccc;
+    cursor: pointer;
+} 
+
+.nav .menu-salir ul li i{
+    margin-right: 10px;
+   
+}
+.nav .menu-salir ul li a{
+    color: rgb(43, 39, 39);
+    text-decoration: none;
+}
+
+.nav .menu-salir ul li a:hover{
+    color: rgb(172, 169, 169);
+}
+.nav .menu-salir ul li:hover{
+    color: rgb(172, 169, 169);
+}
+
+.contenedor{
+    margin: 20px 0px;
+    width: 60%;
+    box-shadow: 0 2px 5px 0 rgba(71, 69, 69, 0.5);
+    background: #fff;
+    border-radius: 5px;
+}
+.contenedor .titulo-step{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.step-row{
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px rgb(143, 142, 142);
+    position: relative;
+}
+
+/*STPER*/
+/*______________________Step-step INICIO_______________________*/
+.stepper-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    margin: 10px auto;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  
+  }
+ /*baras*/ 
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    background: #ccc;
+    width: 100%;
+    top: 14px;
+    left: -50%;
+    z-index: 2;
+  }
+  
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid rgba(165, 165, 165, 0.1);
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+  }
+  
+  .stepper-item.active + .stepper-item::before{
+    background-color: rgb(71, 71, 241);
+    }
+
+  .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+  }
+  
+
+  .step-counter.active{
+    background-color: rgb(71, 71, 241);
+  }
+
+  
+
+  .stepper-item .step-counter {
+    /*background-color: #a899e2;*/
+    border: 1px solid #ccc;
+  }
+  .step-name{/*definimos el tamano de textos*/
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .stepper-item.active {/*para cativar el color los textos*/
+    font-weight: bold;
+    color: rgb(71, 71, 241);;
+  }
+
+  .stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    /*border-bottom: 1px solid #a899e2;*/
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+  }
+  
+  .stepper-item:first-child::before {
+    content: none;
+  }
+  .stepper-item:last-child::after {
+    content: none;
+  }
+
+/*______________________Step-step FIN_______________________*/
+/*
+.step-col{
+    width: 120px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background: rgb(89,17,224);
+    
+}
+
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid rgb(89,17,224);
+    
+}
+*/
+/*__________Princial INICIO_____________________*/
+.contenedor .items-norma-1{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.contenedor .titulo-step .titulo{
+    margin-top: 20px;
+    width: 100%;
+    color: rgb(71, 71, 241);
+    font-weight: bold;
+}
+
+
+.standar-dimension, .tema-indicador{
+    display: flex;
+    justify-content: space-between;
+}
+
+.preguntas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.standar, .dimension, .tema, .indcador, .preguntas-cualitativas, .preguntas-cuantitativas{
+    /*border: 1px solid #ccc;*/
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 5px;
+    width: 45%;
+    height: 100px;
+    margin: 10px 0px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: rgb(175, 174, 174);
+    font-weight: bold;
+    cursor: pointer;
+}  
+
+.standar:hover, .dimension:hover, .tema:hover, .indcador:hover, .preguntas-cualitativas:hover, .preguntas-cuantitativas:hover{
+    border: 1px solid rgb(71, 71, 241);;
+} 
+
+.standar:hover .titulo-contenido, .dimension:hover .titulo-contenido, .tema:hover .titulo-contenido, .indcador:hover .titulo-contenido, .preguntas-cualitativas:hover .titulo-contenido, .preguntas-cuantitativas:hover .titulo-contenido{
+    color: rgb(71, 71, 241);;
+} 
+
+.preguntas-cualitativas span, .preguntas-cuantitativas span{
+    width: 110px;
+}
+
+.items-norma-1 .contendido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor img{
+    height: 70px;
+    width: 60px;
+}
+
+.botton{
+    cursor: pointer;
+    background: rgb(71, 71, 241);
+    width: 100%;
+    height: 35px;;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.botton:hover{
+    background: rgb(118, 118, 241);
+}
+
+
+/*_________Estandar INICIO______________*/
+
+.contenedor .items-norma-2{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.contenedor .contenedor-general{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #f6f8fa;;
+
+}
+
+.contenedor .contenedor-general .titulo{    
+    border-bottom:  1px solid #ccc;
+    width: 100%;
+    padding: 5px 0px;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;/*para todos los titulos con negritas*/
+}
+
+.contenedor .contenedor-general .titulo span{
+    margin-left: 20px;
+    font-size: 15px;
+    color: #706d6d;
+}
+
+.contenedor-general .contenedor-registrar{
+    width: 95%;
+    margin: 15px auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs{
+    width: 90%;
+    margin-top: 10px;
+}
+
+.nombre-pais, .ano-vigencia, .vercion-pais, .region-pais, .fechas-modificacion-creacion{
+    margin: 3px 0px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/*__INPUTS estandar inicio__*/
+.nombre-pais .datos-1, .ano-vigencia .datos-1, .vercion-pais .datos-1, .region-pais .datos-1, .fechas-modificacion-creacion .datos-1{
+    width: 47%;
+}
+
+.nombre-pais .datos-1 input, .ano-vigencia .datos-1 input, .vercion-pais .datos-1 input, .region-pais .datos-1 input, .fechas-modificacion-creacion .datos-1 input{
+    width: 100%;
+}
+/*__INPUTS estandar FIN__*/
+
+label{
+    font-size: 13px;
+    /* color: rgb(126, 121, 121);*/
+}
+
+#descripcion-estandar{
+    width: 100%; 
+}
+
+.contener-inputs .datos-1 input{
+    padding: 3px 10px;
+    outline: none;  
+    /*border: 1px solid #c5c2c2;*/
+    margin-bottom: 5px;
+    font-size: 13px;
+    /* color: rgb(126, 121, 121);*//*para cambiar el color de las fechas*/
+}
+/*___INPUTS todos INICIO___*/
+input{
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+input[type=text]{/*cambiar el color del text de los inpus luego de dar escribir*/
+    color: #000;
+}
+
+input:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+textarea{
+    font-size: 13px;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+}
+textarea:focus{
+    border: 2px solid rgb(71, 71, 241);
+    outline: 0;
+}
+.preguntas_cualitativas_insertar{/* para los textarea de insertar preguntas */
+    height: 40px;
+}
+/*___INPUTS todos FIN___*/
+/*______SELECTOR todo INICIO________*/
+#selector, #selector-prioridad-nivel{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+
+#selector-tema, #selector-nivel{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+
+#selector:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+#selector-prioridad-nivel:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+#selector-tema:focus, #selector-nivel:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+#selector_pregunta, #selector_pregunta_cuantitativa{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #c5c2c2;
+}
+
+#selector_pregunta:focus, #selector_pregunta_cuantitativa:focus{
+    border: 2px solid rgb(71, 71, 241);;
+}
+
+/*______SELECTOR todo FIN________*/
+
+.contenedor-botones{/*para los botoes internos de INDICADORES tambien es*/
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.boton{
+    cursor: pointer;
+    background: rgb(71, 71, 241);
+    height: 30px;
+    width: 100px;
+    color: #fff;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.boton:hover{
+    background: rgb(118, 118, 241);
+}
+/*_________Estandar FIN______________*/
+/*_________Dimensiones INICIO___________________*/
+.contenedor .items-norma-3{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.contenedor-registrar{/*para TEMAS tambien se aplica*/
+    width: 90%;
+    margin-top: 20px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-registrar .contenedor-dimenision, .contenedor-registrar .contenedor-estadio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.contenedor-registrar .contenedor-dimenision .titulo, .contenedor-registrar .contenedor-estadio .titulo{
+    border-bottom:  1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.contenedor-registrar .contenedor-inputs{/*para TEMAS tambien se aplica*/
+    margin: 5px 0px;
+    width: 90%;
+    /*border: 1px solid #ccc;*/
+ }
+ .contenedor-registrar .contenedor-inputs .datos-1{/*para TEMAS tambien se aplica*/
+     width: 100%;
+     /*background: cornsilk;*/
+     margin: 5px auto;
+     margin-bottom: 15px;
+     
+ }
+
+.contenedor-registrar .contenedor-inputs .datos-1 input, .contenedor-registrar .contenedor-inputs .datos-1 #selector, .contenedor-inputs .datos-1 #selector-prioridad-nivel, .contenedor-inputs .datos-1 #selector-tema, .contenedor-inputs .datos-1 #selector-nivel{/*para TEMAS tambien se aplica*/
+    width: 100%;
+    padding: 3px 10px;
+    outline: none;  
+    /*border: 1px solid #c5c2c2;*/
+    font-size: 13px;
+    /* color: rgb(126, 121, 121);*//*para cambiar el COLOR de select y de todo creo */
+    }
+/*_________Dimensiones FIN___________________*/
+/*__________Tema INICIO_______________________*/
+.contenedor .items-norma-4{
+    width: 80%;
+    margin: 0rem auto;
+}
+.contenedor-registrar .contenedor-tema, .contenedor-registrar .contenedor-nivel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.contenedor-registrar .contenedor-tema .titulo, .contenedor-registrar .contenedor-nivel .titulo{
+    border-bottom:  1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+/*__________Tema FIN_______________________*/
+/*_____________Indicaodr INICIO_____________________*/
+
+.contenedor .items-norma-5{
+    width: 80%;
+    margin: 0rem auto;
+}
+.contenedor-registrar .contenedor-indicadores, .contenedor-registrar .contenedor-estadio-unico {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.contenedor-registrar .contenedor-indicadores .titulo, .contenedor-registrar .contenedor-estadio-unico .titulo{
+    border-bottom:  1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/*__________Preguntas Culitativas INICIO_____________________*/
+.contenedor .items-norma-6{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs select{ /*SELECT de preguntas CUALITATIVAS y CUANTITATIVAS*/
+    width: 120px;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-opciones-preguntas{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 3px 0px;
+    font-size: 13px;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-opciones-preguntas .datos-1 select{
+    padding: 3px;
+    width: 100%;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-opciones-preguntas .datos-1 .insertar-preguntas-cualitativas input{
+    margin-top: 10px;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-preguntas-cualitativas{
+    height: 240px;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;/*scroll cuando hay varias preguntas*/
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-preguntas-cualitativas .datos-1{
+    width: 90%;
+    padding-top: 10px;
+}
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-preguntas-cualitativas input{
+    width: 100%;
+    font-size: 11px;
+}
+/*________________Preguntas Cuantitativas INICIO______________________*/
+.contenedor .items-norma-7{
+    width: 80%;
+    margin: 0rem auto;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-opciones-preguntas-cuantitativas{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+    font-size: 13px;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-preguntas-cualitativas-cuantitativas{
+    height: 240px;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;/*scroll cuando hay varias preguntas*/
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-preguntas-cualitativas-cuantitativas .datos-1{
+    width: 90%;
+    padding-top: 10px;
+}
+.contenedor-general .contenedor-registrar .contener-inputs .contenedor-preguntas-cualitativas-cuantitativas input{
+    width: 100%;
+    font-size: 11px;
+}
+
+/*________ scroll bar INICIO __________*/
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(172, 169, 169); 
+    border-radius: 10px;
+  }
+ /*________ scroll bar FIN __________*/
+
+
+ /*____________Tooltip INICIO_______________*/
+ /*backrando transprante: https://www.html-code-generator.com/css/rgba-color-generator*/
+.texto-emergente{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    margin-left: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    text-transform: none;
+    overflow: auto;
+    visibility: hidden;
+    transition: 0.1s;
+    opacity: 0;
+}
+
+.texto-emergente .titulo-emergente{
+    font-weight: bold;
+    margin: 2px 0px;
+}
+
+.texto-emergente span{
+    color: #fff;
+}
+
+.standar:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dimension:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+.tema:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+.indcador:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+
+.preguntas-cualitativas:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+.preguntas-cuantitativas:hover .texto-emergente{
+    opacity: 1;
+    visibility: visible;
+}
+/*____________Tooltip FIN_______________*/

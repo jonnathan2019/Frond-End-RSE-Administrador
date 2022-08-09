@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estandares Informacion.</title>
+    <link rel="icon" type="image/png" href="../../imagenes/logo_3.png" />
+    <link rel="stylesheet" href="../../css/ver_norma.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!--LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--Libreria alerts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body class="cuerpo">
+    <input type="checkbox" id="check">
+    <!--NAV-->
+    <div class="nav">
+        <label class="logo">
+            <img src="../../imagenes/logo_3.png" alt="">
+            <span>Responsabilidad Empresarial.</span>
+        </label>
+        <ul>
+            <li class="registrar-norma" onclick="registrar_norma()">
+                Registrar Norma
+            </li>
+            <li class="ver-norma" onclick="mostrar_norma_registarada()">
+                Ver Norma
+            </li>
+            <li class="salir" onclick="menuToggle();"><a class="far fa-user" href="#"></a></li>
+            <div class="menu-salir">
+                <div class="info-user">
+                    <div class="logo-user">
+                        <a class="far fa-user"></a>
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="nombre-user">
+                            <span>Jonnthan</span>
+                        </div>
+                        <div class="correo-user">
+                            <span>jonthancuvi@gameil.com</span>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li onclick="ir_perfil();"><i class="far fa-user-circle"></i></i>
+                        <a>Mi Perfil</a>
+                    </li>
+                    <!--<li><i class="fas fa-edit"></i><a href="#">Editar Perfil</a></li>-->
+                    <li><i class="fas fa-sign-out-alt"></i><a onclick="salir()">Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <!--sidebar start-->
+    <!-- <div class="sidebar">
+        <label for="check" class="check1">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="slider-encabesado">
+            R S E
+        </div>
+        <a class="slider-opcion" href="#"><i class="fas fa-home"></i>
+            <span>Home</span>
+            <div class="texto-emergente">
+                Home
+            </div>
+        </a>
+        <a class="slider-opcion" onclick="ir_evaluacion();">
+            <i class="fas fa-poll-h"></i>
+            <span>Evaluacion</span>
+            <div class="texto-emergente">
+                Evaluacion
+            </div>
+        </a>
+        <a class="slider-opcion" onclick="ir_reporte();">
+            <i class="far fa-file-alt"></i>
+            <span>Reporte</span>
+            <div class="texto-emergente">
+                Reporte
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-table"></i>
+            <span>Estandares</span>
+            <div class="texto-emergente">
+                Estandares
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-cogs"></i>
+            <span>Configuracion</span>
+            <div class="texto-emergente">
+                Configuracion
+            </div>
+        </a>
+        <a class="slider-opcion" href="#"><i class="fas fa-info-circle"></i>
+            <span>About</span>
+            <div class="texto-emergente">
+                About
+            </div>
+        </a>
+    </div> -->
+
+    <!--sidebar end-->
+
+    <!--contenido-->
+    <div class="content">
+        <div class="info-normas-titulo">
+            <span>Información Norma</span>
+        </div>
+        <div class="elegir-vista-normas">
+            <div class="seleccionador">
+                <!-- <i class="fas fa-caret-down"></i> -->
+                <select id="selector" class="selector-estandares" onchange="cargar_informacion();">
+                    <option value="2" id="norma">Estándares</option>
+                    <option value="3" id="norma">Dimensiones</option>
+                    <option value="4" id="norma">Temas</option>
+                    <option value="5" id="norma">Indicadores</option>
+                    <option value="1" id="norma">Todo</option>
+                </select>
+            </div>
+        </div>
+        <div class="contenido">
+            <!--Estandares-->
+            <div class="tablas" id="estandares-tabla">
+                <div class="titulo">
+                    <span>Estándares</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Institucion de Pertenencia</th>
+                            <th>Vercion Estándar</th>
+                            <th>Pagina Oficial</th>
+                            <th>Anio de Creación</th>
+                            <th>Anio de Vigencia</th>
+                            <th>Pais Origen</th>
+                            <th>Region Aplicación</th>
+                            <th>Fecha de Creación</th>
+                            <th>Fecha de Modificación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo-tabla-estandares">
+                        <tr>
+                            <td>Agua</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>
+                                <button class="actualizar-estandar" id="actualizar"><i class="fas fa-edit"></i></button>
+                                <button class="eliminar-estandar" id="eliminar"><i
+                                        class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Agua</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>
+                                <button class="actualizar-estandar">Actualizar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Dimension-->
+            <div class="tablas" id="dimensiones-tabla">
+                <div class="titulo">
+                    <span>Dimensiones</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Estandar Pertenencia</th>
+                            <th>Fecha de Creación</th>
+                            <th>Fecha de Modificación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo-tabla-dimensiones">
+                        <tr>
+                            <th>ID</th>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>
+                                <button>Actualizar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ID</th>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>
+                                <button>Actualizar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Tema y Nivel-->
+            <div class="tablas" id="temas-tabla">
+                <div class="titulo">
+                    <span>Temas</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Dimension Pertenecia</th>
+                            <th>Fecha de Creación</th>
+                            <th>Fecha de Modificación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo-tabla-temas">
+                        <tr>
+                            <th>ID</th>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>Enero</td>
+                        </tr>
+                        <tr>
+                            <th>ID</th>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>Enero</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <!--Indicadores-->
+            <div class="tablas" id="indicadores-tabla">
+                <div class="titulo">
+                    <span>Indicadores</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Tema Pertenencia</th>
+                            <th>Nivel Pertenencia</th>
+                            <th>Fecha de Creación</th>
+                            <th>Fecha de Modificación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cuerpo-tabla-indicadores">
+                        <tr>
+                            <th>ID</th>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>
+                                <button>Actualizar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ID</th>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>Agua</td>
+                            <td>Enero</td>
+                            <td>$ 3,000</td>
+                            <td>
+                                <button>Actualizar</button>
+                                <button>Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function cargar_informacion() {
+            var combo = document.getElementById("selector");
+            var selected = combo.options[combo.selectedIndex].text;
+            /* Para obtener el valor 
+            var cod = document.getElementById("producto").value;
+            alert(cod);*/
+            //alert(selected);
+            if (selected == 'Todo') {
+                document.getElementById('estandares-tabla').style.display = 'block'
+                document.getElementById('dimensiones-tabla').style.display = 'block'
+                document.getElementById('temas-tabla').style.display = 'block'
+                document.getElementById('indicadores-tabla').style.display = 'block'
+            }
+            else if (selected == 'Estándares') {
+                document.getElementById('estandares-tabla').style.display = 'block'
+                document.getElementById('dimensiones-tabla').style.display = 'none'
+                document.getElementById('temas-tabla').style.display = 'none'
+                document.getElementById('indicadores-tabla').style.display = 'none'
+            }
+            else if (selected == 'Dimensiones') {
+                document.getElementById('estandares-tabla').style.display = 'none'
+                document.getElementById('dimensiones-tabla').style.display = 'block'
+                document.getElementById('temas-tabla').style.display = 'none'
+                document.getElementById('indicadores-tabla').style.display = 'none'
+            }
+            else if (selected == 'Temas') {
+                document.getElementById('estandares-tabla').style.display = 'none'
+                document.getElementById('dimensiones-tabla').style.display = 'none'
+                document.getElementById('temas-tabla').style.display = 'block'
+                document.getElementById('indicadores-tabla').style.display = 'none'
+            }
+            else if (selected == 'Indicadores') {
+                document.getElementById('estandares-tabla').style.display = 'none'
+                document.getElementById('dimensiones-tabla').style.display = 'none'
+                document.getElementById('temas-tabla').style.display = 'none'
+                document.getElementById('indicadores-tabla').style.display = 'block'
+            }
+        }
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.menu-salir');
+            toggleMenu.classList.toggle('active')
+        }
+
+        var tabs = document.querySelectorAll(".tabs ul li");
+        var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+        tabs.forEach(function (tab, tab_index) {
+            tab.addEventListener("click", function () {
+                tabs.forEach(function (tab) {
+                    tab.classList.remove("active");
+                })
+                tab.classList.add("active");
+
+                tab_wraps.forEach(function (content, content_index) {
+                    if (content_index == tab_index) {
+                        content.style.display = "block";
+                    }
+                    else {
+                        content.style.display = "none";
+                    }
+                })
+
+            })
+        })
+
+
+    </script>
+
+</body>
+<script src="../../js/urls.js"></script>
+<script src="../../js/js_registrar_norma/ver_norma.js"></script>
+
+</html>
